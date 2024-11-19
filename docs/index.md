@@ -3,7 +3,7 @@
 SCMP è la piattaforma di cloud management di Leonardo S.p.a. che permette la governance, la gestione del ciclo di vita, il brokering e l’automazione delle risorse gestite in ambiente cloud.
 
 
-## In breve:
+## In breve
 
 La soluzione di Secure Cloud Management Platform, in linea con la definizione di Gartner indicata nei Documenti di riferimento, è una piattaforma operativa che permette la governance, la gestione del ciclo di vita, il brokering e l’automazione delle risorse gestite in ambiente cloud e si divide nelle seguenti aree funzionali:
 *	Inventory and classification
@@ -27,3 +27,70 @@ L’architettura di SCMP (vedi Figura 1) è un’architettura a moduli come desc
 
 
 ![An example image](images/architettura.png)
+
+#### sono una didascalia per l'immagine
+
+##Informazioni utili
+
+la pagina è disponibile all' [indirizzo]()
+
+
+a
+a
+a
+a
+a
+a
+a
+a
+a
+
+aa
+
+a
+a
+a
+aa
+
+a
+a
+aa
+
+a
+aa
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+aa
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+a
+
+[torna a immagine](index.md#sono una didascalia per l'immagine)
