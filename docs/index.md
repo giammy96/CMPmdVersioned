@@ -1,17 +1,29 @@
-# Welcome to My Docs 0.4
+# Welcome to CMP Docs 1.0.0
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-## Commands
+SCMP è la piattaforma di cloud management di Leonardo S.p.a. che permette la governance, la gestione del ciclo di vita, il brokering e l’automazione delle risorse gestite in ambiente cloud.
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
 
-## Project layout
+## In breve:
 
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+La soluzione di Secure Cloud Management Platform, in linea con la definizione di Gartner indicata nei Documenti di riferimento, è una piattaforma operativa che permette la governance, la gestione del ciclo di vita, il brokering e l’automazione delle risorse gestite in ambiente cloud e si divide nelle seguenti aree funzionali:
+*	Inventory and classification
+*	Monitoring and analytics
+*	Cost management and workload optimization
+*	Security & compliance
+*	Orchestration and Provisioning
+
+La piattaforma supporta gli ambienti su Google Cloud, Microsoft Azure, VMware, Azure Stack HUB & HCI, Red Hat Openshift, Amazon Web Servceis (AWS), Oracle OCI, data la loro ampia presenza nel settore Enterprise.
+
+
+## Architettura
+
+L’architettura di SCMP (vedi Figura 1) è un’architettura a moduli come descritto di seguito:
+
+•	SCMP Portal: Una soluzione di front end web e mobile flessibile, consente di comporre la soluzione verso diverse esigenze del cliente. Permette la gestione degli utenti, delle risorse come virtual machines, storages, networks e consente di effettuare monitoring e provisioning di tutte le risorse di ogni cloud provider configurato. 
+•	SCMP Components: In questo layer vengono inserite tutte le componenti della piattaforma sviluppate per poter erogare le funzionalità di gestione della piattaforma cloud management.
+•	SCMP Abstraction Layer: L’Abstraction Layer consente di fornire un livello di astrazione delle risorse erogate dai cloud providers implementando direttamente i protocolli di comunicazione specifici e uniformando l’accesso a risorse della stessa tipologia.
+•	SCMP Platform Components: In questo layer vengono inserite tutte le componenti della piattaforma gestite con soluzioni di terze parti. In questo layer sono presenti i sistemi di identificazione, la soluzione di Api gateway, il sistema di cache e la gestione dei topics.
+•	Cloud providers: In questo layer vengono inseriti tutte le piattaforme cloud che la SCMP riesce a supportare, come Microsoft Azure, Vmware vSphere, Google Cloud Provider (GCP), Amazon Web Services (AWS), Red Hat Openshift, Microsft Azure Stack Hub and Microsoft Stack HCI, RedHat Openshift e Vcloud Director e Oracle.
+
+
+![An example image](images/architettura.png)
