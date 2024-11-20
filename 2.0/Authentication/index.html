@@ -1,0 +1,1693 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <link rel="canonical" href="https://mkdocs-material.github.io/example-versioning/2.0/Authentication/">
+      
+      
+        <link rel="prev" href="../Administration/">
+      
+      
+        <link rel="next" href="../Backup%20Disaster%20Recovery/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Authentication - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gruppi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Authentication
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Welcome to CMP Docs
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Administration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gruppi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gruppi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gruppi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-gruppi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione Gruppi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestione-utenti-assegnati-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestione utenti assegnati e attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione-di-un-gruppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione Modifica ed Eliminazione di un Gruppo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utenti
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utenti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-nuovi-utenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione nuovi utenti
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assegnazione-ruoli-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assegnazione Ruoli e Attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-delle-credenziali" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset delle credenziali
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione-di-un-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione modifica ed Eliminazione di un Utente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestione-menu-abilitati-per-utentegruppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestione menù abilitati per utente/Gruppo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-profili-utente-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste profili utente e Attributi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Liste profili utente e Attributi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amministratore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amministratore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestore-del-servizio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestore del servizio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzatore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorizzato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorizzato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backup%20Disaster%20Recovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Costs%20e%20Usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Costs e Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funzionalita%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzionalita software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funzionalit%C3%A0%20condivise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzionalità condivise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gestione%20Tenant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestione Tenant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inventory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Service%20Detail%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Detail Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gruppi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gruppi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Gruppi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-gruppi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione Gruppi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestione-utenti-assegnati-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestione utenti assegnati e attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione-di-un-gruppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione Modifica ed Eliminazione di un Gruppo
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#utenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Utenti
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Utenti">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#creazione-nuovi-utenti" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione nuovi utenti
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assegnazione-ruoli-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Assegnazione Ruoli e Attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reset-delle-credenziali" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reset delle credenziali
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione-di-un-utente" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione modifica ed Eliminazione di un Utente
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gestione-menu-abilitati-per-utentegruppo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestione menù abilitati per utente/Gruppo
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#liste-profili-utente-e-attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Liste profili utente e Attributi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Liste profili utente e Attributi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#attributi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#amministratore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Amministratore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gestore-del-servizio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gestore del servizio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzatore" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzatore
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#autorizzato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Autorizzato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Authentication</h1>
+
+<p>La funzionalità di “Authentication” permette di interagire con lo IAM
+per modificare la profilatura utenti.</p>
+<p>Per le configurazioni preliminari attenersi alle specifiche indicate nel
+documento inserito nella tabella dei riferimenti a pagina
+<a href="#_Ref173337484">22</a>.</p>
+<p>Il menu è accessibile dal tasto in alto a destra, come mostrato di
+seguito.</p>
+<p>In particolare, per accedere alla profilatura utente il menu è
+“Authentication” (Figura 7).</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image8.png" /></p>
+<p>Figura 7 - Accesso alla funzionalità Authentication</p>
+<p>Visualizzazione dashboard per la profilatura utente:</p>
+<p><img alt="" src="../images/extract/media/image9.png" /><img alt="Immagine
+che contiene schermata, Elettrodomestico, elettrodomestico, design
+Descrizione generata
+automaticamente" src="../images/extract/media/image10.png" /></p>
+<p>Figura 8 - Dashboard di IAM</p>
+<h3 id="gruppi">Gruppi</h3>
+<p>Per semplificare l’assegnazione di menù attributi e autorizzazioni è
+possibile utilizzare dei gruppi di utenti, cliccare il menù “Groups”
+nella sezione “Entities” della dashbaord IAM (Rif. Figura 9).</p>
+<p><img alt="Immagine che contiene schermata, testo, design Descrizione generata
+automaticamente" src="../images/extract/media/image11.png" /></p>
+<p>Figura - Accesso alla gestione Gruppi</p>
+<p>Una volta cliccato il link verrà mostrata all’utente la lista di tutti i
+gruppi disponibili sul portale con i rispettivi pulsanti di
+configurazione (Figura 10).</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image12.png" /></p>
+<p>Figura - Lista dei gruppi configurati</p>
+<h4 id="creazione-gruppi">Creazione Gruppi</h4>
+<p>Per creare un nuovo gruppo all’ interno del sistema, cliccare il pusante
+“+” in alto a destra, verrà visualizzata una maschera di creazione del
+Gruppo (Figura 11).</p>
+<p><img alt="Immagine che contiene testo, schermata, software Descrizione generata
+automaticamente" src="../images/extract/media/image13.png" /></p>
+<p>Figura - Aggiunta nuovo Gruppo</p>
+<p>Inserire il nome del gruppo (Figura 12) e cliccare il tasto “Add Group”
+per aggiungerlo al sistema. Una volta premuto il sistema ci porta alla
+lista dei gruppi disponibili dove possiamo trovare il gruppo appena
+creato</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image14.png" /></p>
+<p>Figura – Parametri di inserimento Gruppo</p>
+<h4 id="gestione-utenti-assegnati-e-attributi">Gestione utenti assegnati e attributi</h4>
+<p>Per poter assegnare degli utenti ad un gruppo, dalla lista dei gruppi
+disponibili, cliccare sull’ icona “persone” sulla riga corrispondente al
+gruppo interessato (Figura 13). L’utente verrà reindirizzato nella
+pagina “Members” dove è possibile visualizzare tutti gli utenti
+assegnati al gruppo e le loro informazioni di base.</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image15.png" /></p>
+<p>Figura - Accesso gestione assegnazione utenti</p>
+<p>Possiamo aggiungere un utente al gruppo (Figura 14) cliccando il tasto
+“+” presente in alto a Destra (1), una volta premuto nella lista degli
+utenti assegnati verrà creata una nuova riga (2) dove all’ interno è
+possibile selezionare dalla lista degli utenti disponibili un utente
+(3).</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image16.png" /></p>
+<p>Figura - Assegnare un utente al gruppo</p>
+<p>Analogamente è possibile rimuovere gli utenti dal gruppo, cliccando il
+pulsante “Cestino” in corrispondenza dell’utente da rimuovere.</p>
+<p>Dopo aver aggiunto tutti gli utenti al gruppo cliccare il tasto “Save”
+in basso a sinistra per salvare le modifiche. Verrà visualizzata una
+modale di conferma salvataggio.</p>
+<p>Possiamo assegnare degli attributi al gruppo che verranno
+automaticamente utilizzati dagli utenti assegnati, (Figura 15) per farlo
+selezionare il tab “Attributes” in alto nella pagina (1), poi
+utilizzando il tasto “+” in alto a destra (2) è possibile aggiungere un
+attributo, nella parte sinistra bisogna inserire la chiave (3) e nella
+parte bianca sulla destra bisonga inserirne il suo valore (4), durante
+l’inserimento vedremo sotto al campo una dropdown dove cliccando sarà
+possibile salvare il valore inserito (5).</p>
+<p>La lista degli attributi disponibili si trova nel paragrafo (5.4.4.1).</p>
+<p><img alt="Immagine che contiene testo, schermata, software, linea Descrizione
+generata
+automaticamente" src="../images/extract/media/image17.png" /></p>
+<p>Figura - Inserire Attributi</p>
+<p>Una volta inseriti tutti gli attributi necessari è possibile salvare le
+modifiche utilizzando il tasto “Save” in basso.</p>
+<p>Per tornare alla lista dei Gruppi disponibili cliccare il tasto “Back”
+presente in ogni pagina.</p>
+<h4 id="visualizzazione-modifica-ed-eliminazione-di-un-gruppo">Visualizzazione Modifica ed Eliminazione di un Gruppo</h4>
+<p>Sempre dalla lista dei Gruppi disponibili per ogni gruppo sono
+disponibili una serie di pulsanti (Figura 16):</p>
+<ul>
+<li>
+<p>“Lente di ingrandimento”: permette la visualizzazione delle info sul
+  Gruppo (indicato con una freccia rossa nell’ immagine);</p>
+</li>
+<li>
+<p>“Matita”: permette la modifica delle informazioni base del gruppo
+  (indicato con una freccia gialla nell’ immagine);</p>
+</li>
+<li>
+<p>“Cestino”: permette l’eliminazione del gruppo dopo aver cliccato
+  “conferma” nella modale visualizzata (indicato con una freccia viola
+  nell’ immagine).</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image18.png" /></p>
+<p>Figura - Pulsanti di controllo</p>
+<h3 id="utenti">Utenti</h3>
+<p>Per poter accedere ed utilizzare il sistema è necessario che l’utenza da
+utilizzare sia opportunamente configurata, di seguito vedremo il
+processo di creazione e gestione di un utente all’ interno della SCMP
+utilizzando IAM come applicazione per il controllo degli accessi.</p>
+<p>Per accedere alla gestione Utenti cliccare il menù “Users” nella sezione
+“Entities” della dashbaord IAM (Figura <strong>17</strong>).</p>
+<p><img alt="Immagine che contiene schermata, software, testo, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image19.png" /></p>
+<p>Figura 17 - Accesso alla gestione Utenti</p>
+<p>Una volta cliccato il link verrà mostrata all’utente la lista di tutti i
+gruppi disponibili sul portale con i rispettivi pulsanti di
+configurazione (Figura 18).</p>
+<p><img alt="Immagine che contiene schermata, elettrodomestico, design Descrizione
+generata
+automaticamente" src="../images/extract/media/image20.png" /></p>
+<p>Figura - Lista degli utenti configurati</p>
+<h4 id="creazione-nuovi-utenti">Creazione nuovi utenti</h4>
+<p>Per creare un nuovo utente all’ interno del sistema, cliccare il pusante
+“+” in alto a destra, verrà visualizzata una maschera di creazione dell’
+utente (Figura 19).</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image21.png" /></p>
+<p>Figura - Creazione nuovo utente</p>
+<p>Verrà visualizzato il form di creazione di un nuovo utente, compilare i
+campi obbligatori della lista:</p>
+<ul>
+<li>
+<p>E-mail: l’indirizzo e-mail valido dell’ utente.</p>
+</li>
+<li>
+<p>Username: l’username da utilizzare come utenza di accesso al portale.</p>
+</li>
+<li>
+<p>First Name: Nome dell’ utente.</p>
+</li>
+<li>
+<p>Last Name: Cognome dell’ utente.</p>
+</li>
+<li>
+<p>Password: Password di almeno 8 caratteri da utilizzare per l’accesso.</p>
+</li>
+<li>
+<p>Max concurrent connections : Numero di connessioni massime in
+  contemporanea abilitate per l’utente.</p>
+</li>
+<li>
+<p>Default Language: La lingua di base da visualizzare nel sistema.</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image22.png" /></p>
+<p>Figura - Maschera di creazione utente</p>
+<p>Una volta inseriti tutti i campi obbligatori cliccare il pulsante “+ Add
+user” per completare l’inserimento.</p>
+<p>Verrà visualizzato un messaggio di conferma e la pagina si resetta per
+permettere l’inserimento di un nuovo utente.</p>
+<p>Per visualizzare l’utente appena creato tornare nella pagina contenente
+la lista degli utenti.</p>
+<h4 id="assegnazione-ruoli-e-attributi">Assegnazione Ruoli e Attributi</h4>
+<p>Per gestire gli utenti è possibile cliccare il tasto “Gruppi” in
+corrispondenza della riga dell’utente da modificare (Figura 21)</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image23.png" /></p>
+<p>Figura - Accesso alla gestione utente</p>
+<p>Una volta premuto il pulsante, la pagina si aggiorna per mostrare la
+pagina “Groups” (Figura 22) dove è possibile assegnare o rimuovere uno o
+più gruppi all’ utente.</p>
+<p>Per aggiungere un nuovo gruppo all’utente bisogna selezionare, nella
+sezione di sinistra, il gruppo che si vuole assegnare all’utente (1) e,
+successivamente cliccando il pulsante “Associa” al centro della pagina
+(2) il gruppo passerà automaticamente nella sezione destra e le
+modifiche verranno salvate automaticamente.</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image24.png" /></p>
+<p>Figura - Associare un utente al gruppo</p>
+<p>Analogamente è possibile rimuovere l’utente dal gruppo cliccando prima
+il gruppo da rimuovere nella sezione di destra e successivamente il
+tasto “Dissocia” al centro della pagina (Figura 23), le modifiche
+verranno salvate automaticamente.</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image25.png" /></p>
+<p>Figura – Dissociare un utente dal gruppo</p>
+<p>È possibile, inoltre, tramite i tasti presenti nella sezione di destra,
+in corrispondenza di ogni gruppo, modificare la priorità dei vari
+gruppi.</p>
+<p>Anche per gli utenti è possibile assegnare degli attributi
+personalizzati, per farlo selezionare il tab “Attributes” (Figura 24) in
+alto nella pagina (1), poi utilizzando il tasto “+” in alto a destra (2)
+è possibile aggiungere un attributo, nella parte sinistra bisogna
+inserire la chiave (3) e nella parte bianca sulla destra bisogna
+inserirne il suo valore (4), durante l’inserimento vedremo sotto al
+campo una dropdown dove cliccando sarà possibile salvare il valore
+inserito (5).</p>
+<p>La lista degli attributi disponibili si trova nel paragrafo (5.4.4.1).</p>
+<p><img alt="Immagine che contiene testo, schermata, software, linea Descrizione
+generata
+automaticamente" src="../images/extract/media/image17.png" /></p>
+<p>Figura - Inserire Attributi</p>
+<p>Una volta inseriti tutti gli attributi necessari è possibile salvare le
+modifiche utilizzando il tasto “Save” in basso.</p>
+<h4 id="reset-delle-credenziali">Reset delle credenziali</h4>
+<p>Come amministratore degli utenti è possibile resettare le password, per
+farlo bisogna cliccare sul tab “Credentials” visualizzato in alto nella
+pagina, (Figura 25) in questo tab è possibile inserire una nuova
+password per l’utente e configurarla come “Temporanea”, la password
+temporanea dovrà essere modificata dall’utente dopo il primo accesso. Si
+può inoltre definire un periodo di validità della password espresso in
+giorni.</p>
+<p><img alt="Immagine che contiene schermata, software, Software multimediale,
+testo Descrizione generata
+automaticamente" src="../images/extract/media/image26.png" /></p>
+<p>Figura - Modifica della password per l'utente</p>
+<h4 id="visualizzazione-modifica-ed-eliminazione-di-un-utente">Visualizzazione modifica ed Eliminazione di un Utente</h4>
+<p>Sempre dalla lista degli utenti disponibili per ogni gruppo sono
+disponibili una serie di pulsanti (Figura 26):</p>
+<ul>
+<li>
+<p>“Lente di ingrandimento”: permette la visualizzazione delle info
+  utente(indicato con una freccia rossa nell’ immagine).</p>
+</li>
+<li>
+<p>“Matita”: permette la modifica delle informazioni base dell’ utente
+  (indicato con una freccia gialla nell’ immagine).</p>
+</li>
+<li>
+<p>“Cestino”: permette l’eliminazione dell’utente dopo aver cliccato
+  “conferma” nella modale visualizzata (indicato con una freccia viola
+  nell’ immagine).</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image18.png" /></p>
+<p>Figura - Pulsanti di controllo</p>
+<h3 id="gestione-menu-abilitati-per-utentegruppo">Gestione menù abilitati per utente/Gruppo</h3>
+<p>Il sistema IAM integrato nella SCMP permette anche la gestione degli
+elementi di menù disponibili per i vari utenti e gruppi, per accedere
+alla funzionalità basta cliccare il link “User managment X Pages”
+disponibile nella sezione “Administration” della dashboard IAM (Figura
+27).</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image27.png" /></p>
+<p>Figura - Accesso alla gestione dei menù</p>
+<p>All’interno della pagina in alto, sono presenti due menu a tendina, il
+menu a tendina a sinistra consente di selezionare un singolo utente,
+quello a destra consente di selezionare un gruppo.(Figura 28)</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image28.png" /></p>
+<p>Figura - Selezione dell' utente/gruppo da modificare</p>
+<p>Dopo aver selezionato un’utenza, la pagina verrà aggiornata per mostrare
+tutti gli “STREAM” disponibili sull’ applicazione, è possibile cliccare
+il tasto “+” in corrispondenza di ogni riga per visualizzarne i
+“MODULES” e i “COMPONENT” disponibili. (Figura 29)</p>
+<p>Le liste delle componenti visualizzate sono generate automaticamente dal
+sistema utilizzando le configurazioni eseguite durante l’installazione.</p>
+<p>Per ogni component presente è possibile, cliccando il menù a tendina
+sulla riga corrispondente, indicarne la visibilità o meno
+all’utente/gruppo che abbiamo selezionato precedentemente.</p>
+<p>I valori selezionabili sono:</p>
+<ul>
+<li>
+<p><strong>Enabled and default</strong>: può essere indicato solo un default per
+  modulo, selezionando questa opzione rendiamo come principale la pagina
+  selezionata; quindi, al click del menù l’utente verrà reindirizzato su
+  questa pagina.</p>
+</li>
+<li>
+<p><strong>Enabled</strong> : Indica che il menù è visibile ed utilizzabile
+  dall’utente/gruppo.</p>
+</li>
+<li>
+<p><strong>Disabled</strong>: Indica che il menù non verrà abilitato e non sarà
+  visibile all’ utente/gruppo.</p>
+</li>
+<li>
+<p><strong>N.D</strong>: non definito (il menù è disabilitato e non sarà visibile).</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image29.png" /></p>
+<p>Figura - Gestione delle autorizzazioni del menù</p>
+<h3 id="liste-profili-utente-e-attributi">Liste profili utente e Attributi</h3>
+<p>In questa sezione vengono evidenziate le diverse tipologie di utente che
+possono accedere e utilizzare il prodotto descritto.</p>
+<p>Per ognuno di essi, viene riportato un elenco delle funzionalità alle
+quali l’utente è stato abilitato e con le quali può interagire.</p>
+<p>Vengono indicati qui anche tutti gli attributi che possono essere
+assegnati a Utenti e Gruppi.</p>
+<h4 id="attributi">Attributi</h4>
+<p>[TABLE]</p>
+<p>Tabella 2 – lista degli Attributi configurabili</p>
+<h4 id="amministratore">Amministratore</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Funzionalità</strong></th>
+<th><strong>Create</strong></th>
+<th><strong>Read</strong></th>
+<th><strong>Undo</strong></th>
+<th><strong>Delete</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Security</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Catalog</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Cloud Maturity model</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Provisioning</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Tenant Management</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Service Detail Design</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 3 - Autorizzazioni Utente Amministratore</p>
+<h4 id="gestore-del-servizio">Gestore del servizio</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Funzionalità</strong></th>
+<th><strong>Create</strong></th>
+<th><strong>Read</strong></th>
+<th><strong>Undo</strong></th>
+<th><strong>Delete</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Costs</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Security</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Catalog</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Administration</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cloud Maturity model</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Provisioning</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tenant Management</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Service Detail Design</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 4 - Autorizzazioni Utente gestore</p>
+<h4 id="visualizzatore">Visualizzatore</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Funzionalità</strong></th>
+<th><strong>Create</strong></th>
+<th><strong>Read</strong></th>
+<th><strong>Undo</strong></th>
+<th><strong>Delete</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td>x</td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Security</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Catalog</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Administration</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Cloud Maturity model</td>
+<td></td>
+<td>x</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Provisioning</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Tenant Management</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Service Detail Design</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 5 - Autorizzazioni Utente Visualizzatore</p>
+<h4 id="autorizzato">Autorizzato</h4>
+<table>
+<thead>
+<tr>
+<th><strong>Funzionalità</strong></th>
+<th><strong>Create</strong></th>
+<th><strong>Read</strong></th>
+<th><strong>Undo</strong></th>
+<th><strong>Delete</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Monitoring</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Costs</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Inventory</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Security</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Dashboard</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Catalog</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Authentication</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Administration</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Cloud Maturity model</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Provisioning</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>Tenant Management</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Service Detail Design</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 6 - Autorizzazioni Utente autorizzato</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
