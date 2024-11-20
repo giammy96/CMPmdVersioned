@@ -1,0 +1,2659 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <link rel="canonical" href="https://mkdocs-material.github.io/example-versioning/1.3/Administration/">
+      
+      
+      
+        <link rel="next" href="../Authentication/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Administration - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#providersottosistemi" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Administration
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#providersottosistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      provider/sottosistemi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="provider/sottosistemi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-dei-sottosistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista dei sottosistemi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-nuovo-sottosistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione nuovo sottosistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione nuovo sottosistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametri-condivisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri condivisi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Azure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack-hci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack HCI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack-hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack Hybrid cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-amazon-web-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Amazon Web Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Google Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-openshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Openshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Oracle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-vcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri VCloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri VMWare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifica-della-connessione-e-salvataggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifica della connessione e salvataggio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-edit-ed-eliminazione-di-un-sottosistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione edit ed eliminazione di un sottosistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modello-di-costo-per-i-provider-on-premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modello di costo per i provider “On-Premise”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Folders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Cloud Folders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siem" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SIEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione, modifica ed eliminazione
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrets-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secrets Managers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets Managers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-key-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure key vault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-secret-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Secret Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commvault" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommVault
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione , modifica ed eliminazione
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backup%20Disaster%20Recovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Costs%20e%20Usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Costs e Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funzionalita%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzionalita software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funzionalit%C3%A0%20condivise/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzionalità condivise
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gestione%20Tenant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestione Tenant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inventory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Provisioning/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Provisioning
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Service%20Detail%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Detail Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#providersottosistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      provider/sottosistemi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="provider/sottosistemi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lista-dei-sottosistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lista dei sottosistemi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-nuovo-sottosistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione nuovo sottosistema
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione nuovo sottosistema">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametri-condivisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri condivisi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Azure
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack-hci" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack HCI
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-azurestack-hybrid-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri AzureStack Hybrid cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-amazon-web-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Amazon Web Services
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-google-cloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Google Cloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-openshift" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Openshift
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-oracle" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri Oracle
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-vcloud" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri VCloud
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametri-vmware" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parametri VMWare
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#verifica-della-connessione-e-salvataggio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Verifica della connessione e salvataggio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-edit-ed-eliminazione-di-un-sottosistema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione edit ed eliminazione di un sottosistema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modello-di-costo-per-i-provider-on-premise" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modello di costo per i provider “On-Premise”
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Folders
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Folders">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure Folder
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-cloud-folders" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Cloud Folders
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#siem" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIEM
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SIEM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione, modifica ed eliminazione
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#secrets-managers" class="md-nav__link">
+    <span class="md-ellipsis">
+      Secrets Managers
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Secrets Managers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#azure-key-vault" class="md-nav__link">
+    <span class="md-ellipsis">
+      Azure key vault
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#google-secret-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Google Secret Manager
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commvault" class="md-nav__link">
+    <span class="md-ellipsis">
+      CommVault
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualizzazione-modifica-ed-eliminazione_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualizzazione , modifica ed eliminazione
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Administration</h1>
+
+<p>La funzionalità di Administration è la base di partenza per poter
+utilizzare la SCMP.</p>
+<p>I provider inseriti all’ interno di questa funzionalità verranno
+utilizzati dal sistema per recuperare tutte le informazioni necessarie.</p>
+<p>All’ interno della funzionalità sarà possibile:</p>
+<ul>
+<li>
+<p>Configurare i cloud provider che potranno essere utilizzati nel Tenant
+  di riferimento.</p>
+</li>
+<li>
+<p>Configurare le folder dei vari provider.</p>
+</li>
+<li>
+<p>Configurare i cloud SIEM dei vari provider.</p>
+</li>
+<li>
+<p>Configurare i KeyVault dei vari provider.</p>
+</li>
+</ul>
+<h3 id="providersottosistemi">provider/sottosistemi</h3>
+<h4 id="lista-dei-sottosistemi">Lista dei sottosistemi</h4>
+<p>Per accedere alla funzionalità di Administration, in alto a sinistra
+cliccare sul pulsante bento. Dopodiché, cliccare su “Administration”
+(Figura 41).</p>
+<p>A questo punto, l’utente si ritrova all’interno della pagina del tab
+“Cloud Systems” (Figura 42).</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image41.png" /></p>
+<p>Figura 41 - Accesso ad Administration</p>
+<p>L’utente visualizzerà la dashboard dove viene mostrato l’elenco dei
+provider gestiti dalla SCMP.</p>
+<p>All’interno della tabella è possibile visualizzare, oltre alla data di
+creazione, se il provider è di tipo On-Permise segnalato all’ utente
+tramite una spunta di colore rosso sulla riga corrispondente.</p>
+<p>Nella tabella possiamo notare che i sottosistemi recuperati dalle folder
+non vengono visualizzati ma cliccando in corrispondenza della “freccia
+in basso” sulla riga della folder viene aperta una nuova tabella che
+visualizza tutti i sottosistemi della folder e il loro stato.</p>
+<p>Inoltre, per ogni provider è disponibile un “pallino” che indica lo
+stato attuale del sottosistema :</p>
+<ul>
+<li>
+<p>Verde: il sottosistema funziona correttamente nella SCMP “status :
+  ok”.</p>
+</li>
+<li>
+<p>Rosso: il sottosistema non è più utilizzabile dalla SCMP “status :
+  failed”.</p>
+</li>
+</ul>
+<p>La SCMP effettua periodicamente dei test di connessione su ogni
+sottosistema configurato, quando un sottosistema fallisce questo
+controllo, esso viene “disabilitato” e non ne verranno più aggiornate le
+informazioni (costi, inventario , monitoraggio, sicurezza) .</p>
+<p>Questo potrebbe accadere, ad esempio quando il secret o le password
+utilizzate per connettersi scadono e devono essere rinnovate.</p>
+<p>Andando a modificare il sottosistema (5.6.1.3) è possibile inserire i
+nuovi parametri di connessione per ristabilirne il corretto
+funzionamento, ed il “pallino” diventerà di colore verde.</p>
+<h4 id="creazione-nuovo-sottosistema">Creazione nuovo sottosistema</h4>
+<p>Per inserire un nuovo sottosistema all’ interno del portale bisogna
+cliccare sul “menu” disponibile in alto a destra e selezionare “+
+Aggiungi nuovo cloud provider”</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image42.png" /></p>
+<p>Figura 42 - Aggiunta di un nuovo Cloud Provider</p>
+<p>L’utente visualizza i dati di base del sottosistema da inserire,
+spiegati in seguito</p>
+<h5 id="parametri-condivisi">Parametri condivisi</h5>
+<p>All’ interno della pagina di creazione (Figura 43) possiamo notare 3
+campi :</p>
+<ul>
+<li>
+<p>Nome: indica il nome che verrà visualizzato per indicare il
+  sottosistema.</p>
+</li>
+<li>
+<p>Tipo: indica la tipologia di cloud provider al quale appartiene il
+  sottosistema.</p>
+</li>
+<li>
+<p>Versione: la versione relativa al provider del sottosistema da
+  installare.</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image43.png" /></p>
+<p>Figura - Parametri generali di un sottosistema</p>
+<p>Dopo aver selezionato la tipologia e la versione del sistema la maschera
+si aggiorna per visualizzare i parametri specifici in base al provider
+selezionato, visto che ognuno di loro gestisce l’autenticazione e le
+risorse in maniera differente.</p>
+<p>Tutti i provider richiedono un’autenticazione, che può variare in base
+al sistema, per il recupero degli asset.</p>
+<p>Queste informazioni sensibili, come password o certificati, vengono
+salvati in maniera sicura su un elemento infrastrutturale che si occupa
+della sicurezza dei dati (<a href="https://www.vaultproject.io/">https://www.vaultproject.io/</a>).</p>
+<h5 id="parametri-azure">Parametri Azure</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici (Figura 44) del sottosistema Azure da inserire
+sono esposti nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image44.png" /></p>
+<p>Figura - Maschera di configurazione Azure</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientId <strong>*</strong></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID univoco del client che si connette al sottosistema Azure Cloud. Questo ID viene utilizzato per identificare il client e per autorizzare l'accesso alle risorse del sottosistema.</td>
+<td>5a85c16c6ad-49db-a58e-e209-ee11f53d6c6b</td>
+</tr>
+<tr>
+<td>clientSecret *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">La chiave segreta del client, utilizzata per autenticare il client con il sottosistema Azure Cloud. La chiave segreta deve essere tenuta segreta e non deve essere condivisa con nessuno.</td>
+<td>np6Kc_.xwsvhR8Q~rP05fCqYNXmbqfMGQLOEzfMt</td>
+</tr>
+<tr>
+<td>tenantId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID del tenant Azure a cui appartiene il sottosistema Azure Cloud. Il tenant è un'entità organizzativa in Azure che rappresenta un'azienda o un'organizzazione.</td>
+<td>884147733-ff13-4783-a765-834183773083</td>
+</tr>
+<tr>
+<td>subscriptionId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID della sottoscrizione Azure utilizzata per accedere al sottosistema Azure Cloud. La sottoscrizione è un contratto per l'utilizzo dei servizi Azure.</td>
+<td>884147733-ff13-4783-a765-834183773083</td>
+</tr>
+<tr>
+<td>usageAggregation</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Indica se l'aggregazione per "usage" è abilitata per la sottoscrizione. Quando questa spunta viene abilitata i costi del sottosistema verranno raggruppati per Tipologia risorsa</td>
+<td>false</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+<tr>
+<td>clientId</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID univoco del client che si connette al sottosistema Azure Cloud. Questo ID viene utilizzato per identificare il client e per autorizzare l'accesso alle risorse del sottosistema.</td>
+<td>5a85c16c6ad-49db-a58e-e209-ee11f53d6c6b</td>
+</tr>
+<tr>
+<td>datsFirstCostRecover</td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">Inserire il numero di giorni precedenti alla data di creazione dei quali bisogna recuperare i costi al primo avvio del sottosistema</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 9 – Campi specifici Azure</p>
+<h5 id="parametri-azurestack">Parametri AzureStack</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema AzureStack da inserire sono
+esposti nella tabella</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image45.png" /></p>
+<p>Figura - Maschera di configurazione AzureStack</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<p>[TABLE]</p>
+<p>Tabella 10 – Campi specifici AzureStack</p>
+<p>Per i provider on Premise, in particolare, vengono richiesti dati sulla
+capacità della infrastruttura, in modo tale che la SCMP possa effettuare
+dei calcoli preliminari in molteplici scenari.</p>
+<p>Per esempio, durante il provisioning, in modo tale da non superare la
+capacità massima consentita del provider.</p>
+<h5 id="parametri-azurestack-hci">Parametri AzureStack HCI</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo</p>
+</li>
+<li>
+<p>Recupero elementi di inventario</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza</p>
+</li>
+<li>
+<p>Provisioning di risorse</p>
+</li>
+<li>
+<p>Provisioning di servizi</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema AzureStack HCI da inserire sono
+esposti nella tabella seguente.</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image46.png" /></p>
+<p>Figura - Maschera di configurazione AzureStack HCI</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<p>[TABLE]</p>
+<p>Tabella 11 – Campi specifici AzureStack HCI</p>
+<p>Per i provider on Premise, in particolare, vengono richiesti dati sulla
+capacità della infrastruttura, in modo tale che la SCMP possa effettuare
+dei calcoli preliminari in molteplici scenari.</p>
+<p>Per esempio, durante il provisioning, in modo tale da non superare la
+capacità massima consentita del provider.</p>
+<h5 id="parametri-azurestack-hybrid-cloud">Parametri AzureStack Hybrid cloud</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema AzureStack Hybrid cloud da
+inserire sono esposti nella tabella</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image47.png" /></p>
+<p>Figura - Maschera di configurazione AzureStack Hybrid cloud</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<p>[TABLE]</p>
+<p>Tabella 12 – Campi specifici AzureStack Hybrid Cloud</p>
+<p>Per i provider on Premise, in particolare, vengono richiesti dati sulla
+capacità della infrastruttura, in modo tale che la SCMP possa effettuare
+dei calcoli preliminari in molteplici scenari.</p>
+<p>Per esempio, durante il provisioning, in modo tale da non superare la
+capacità massima consentita del provider.</p>
+<h5 id="parametri-amazon-web-services">Parametri Amazon Web Services</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema Amazon Web Services da inserire
+sono esposti nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image48.png" /></p>
+<p>Figura - Maschera di configurazione Amazon Web Services</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">La chiave di accesso AWS è una stringa alfanumerica che identifica l'utente AWS.</td>
+<td>ZYKZGVAKIS4YK5IXCAXB</td>
+</tr>
+<tr>
+<td>clientSecret *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">La chiave di accesso segreta AWS è una stringa alfanumerica che viene utilizzata per autenticare l'utente AWS</td>
+<td>np6Kc_.xwsvhR8Q~rP05fCqYNXmbqfMGQLOEzfMt</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 13 – Campi specifici Amazon Web Services</p>
+<h5 id="parametri-google-cloud">Parametri Google Cloud</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema Google Cloud da inserire sono
+esposti nella tabella, il campo “Service account” può essere inserito
+sia automaticamente che manualmente come descritto nel paragrafo.</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image49.png" /></p>
+<p>Figura - Maschera di configurazione Google</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>serviceAccount *</td>
+<td style="text-align: center;">object</td>
+<td style="text-align: center;">File di connessione generato dalla console Google</td>
+<td>service_account.json</td>
+</tr>
+<tr>
+<td>discoveryProjectId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Identificativo del progetto di cui si effettuerà il discovery</td>
+<td>Theproject-547280</td>
+</tr>
+<tr>
+<td>costExportProjectId</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Dataset id del service account di esportazione costi se il dataset è differente dal ProjectID</td>
+<td>test-customer.test_customer.gcp_billing_export_resource_v1_01527DF_51B683_EB2A9</td>
+</tr>
+<tr>
+<td>usageAggregation</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Indica se l'aggregazione per "usage" è abilitata per la sottoscrizione. Quando questa spunta viene abilitata i costi del sottosistema verranno raggruppati per Tipologia risorsa</td>
+<td>false</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>-5</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+<tr>
+<td>datsFirstCostRecover</td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">Inserire il numero di giorni precedenti alla data di creazione dei quali bisogna recuperare i costi al primo avvio del sottosistema</td>
+<td>15</td>
+</tr>
+<tr>
+<td>Cost in USD</td>
+<td style="text-align: center;">Boolean</td>
+<td style="text-align: center;">Se abilitato verranno salvati sul Database anche i costi del provider utilizzando la valuta USD</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 14 – Campi specifici Google</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image50.png" /></p>
+<p>Figura - Caricamento del file di configurazione</p>
+<p>Effettuando l’upload del file il form viene completato automaticamente
+con i parametri necessari, ma è possibile anche inserirli manualmente
+(riquadro giallo presente nell’ immagine, Figura 50) seguendo la
+tabella, tutti i campi sono obbligatori:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserire il nome della tipologia di autenticazione configurata</td>
+<td>service_account</td>
+</tr>
+<tr>
+<td>project_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id univoco del progetto associato al service account</td>
+<td>Theproject-367810</td>
+</tr>
+<tr>
+<td>private_key_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id univoco della chiave privata del service account</td>
+<td>55cb5cf903ee93ea1e9c294a07e46e0af0633e6</td>
+</tr>
+<tr>
+<td>private_key *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">Contiene la chiave privata del service account in formato PEM. È fondamentale per l'autenticazione del service account alle API di Google Cloud</td>
+<td>-----BEGIN PRIVATE KEY-----MIIJQgIBADANB…</td>
+</tr>
+<tr>
+<td>client_e-mail *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'indirizzo e-mail univoco del service account. È utilizzato per identificare il service account quando si autentica alle API di Google Cloud</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#64;&#100;&#111;&#109;&#105;&#110;&#105;&#111;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#64;&#100;&#111;&#109;&#105;&#110;&#105;&#111;&#46;&#99;&#111;&#109;</a></td>
+</tr>
+<tr>
+<td>client_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID client del service account. È un identificatore univoco utilizzato per identificare il service account in Google Cloud</td>
+<td>104822473261100667392</td>
+</tr>
+<tr>
+<td>auth_uri *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URI utilizzato per l'autenticazione del service account alle API di Google Cloud</td>
+<td>https://accounts.google.com/o/oauth2/auth</td>
+</tr>
+<tr>
+<td>token_uri *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URI utilizzato per ottenere un token di accesso per il service account</td>
+<td>https://oauth2.googleapis.com/token</td>
+</tr>
+<tr>
+<td>auth_provider_x509_cert_url*</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URL del certificato X.509 utilizzato per l'autenticazione del service account</td>
+<td>https://www.googleapis.com/oauth2/v1/certs</td>
+</tr>
+<tr>
+<td>client_x509_cert_url *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URL del certificato X.509 nel client</td>
+<td><a href="https://www.googleapis.com/robot/v1/metadata/f543/myserviceaccount%40projectName.gserviceaccount.com">https://www.googleapis.com/robot/v1/metadata/f543/myserviceaccount%40projectName.gserviceaccount.com</a></td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 15 – Campi specifici obbligatori del file “service_account.json”</p>
+<h5 id="parametri-openshift">Parametri Openshift</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema Openshift da inserire sono
+esposti nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image51.png" /></p>
+<p>Figura - Maschera di configurazione Openshift</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<p>[TABLE]</p>
+<p>Tabella 16 – Campi specifici OpenShift</p>
+<h5 id="parametri-oracle">Parametri Oracle</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema Oracle da inserire sono esposti
+nella tabella seguente:</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image52.png" /></p>
+<p>Figura - Maschera di configurazione Oracle</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>username *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Il nome utente utilizzato per l'autenticazione con OCI.</td>
+<td>ocid5.user.oc77.aaabnbthaj6pnvsb2gqnaaaaait3mqzekefmlhwkige2wxna6hfaj3f6njma</td>
+</tr>
+<tr>
+<td>fingerprint *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">è un valore univoco che identifica il dispositivo, utilizzato per l'autenticazione con OCI.</td>
+<td>6a:f4:6e:9a:73:95:27:d5:64:8d11:a3:f5:0e:fb:f4:</td>
+</tr>
+<tr>
+<td>tenantId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID del tenant OCI a cui ci si vuole connettere</td>
+<td>ocid5.tenancy.oc77...aaabnbthaj6pnvsb2gqnaaaaait3mqzekefmlhwkige2wxna6hfaj3f6njma</td>
+</tr>
+<tr>
+<td>region *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">La regione è ls posizione geografica specifica in cui si trovano le risorse OCI.</td>
+<td>eu-dcc-rome-1</td>
+</tr>
+<tr>
+<td>Realm</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Il nome del contenitore logico che raggruppa le risorse OCI e i relativi costi.</td>
+<td>personal-realm.it</td>
+</tr>
+<tr>
+<td>keyFile *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">un file PEM che contiene la chiave pubblica e privata utilizzata per l'autenticazione.</td>
+<td>" -----BEGIN PRIVATE KEY-----MIIJQgIBADANB…"</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>-10</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 17 – Campi specifici Oracle</p>
+<h5 id="parametri-vcloud">Parametri VCloud</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema VCloudDirector da inserire sono
+esposti nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image53.png" /></p>
+<p>Figura - Maschera di configurazione VCloudDirector</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>url *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'indirizzo del server VCloudDirector a cui ci si vuole connettere</td>
+<td><a href="https://url.westeurope.com/tenant/org-zzg-435832">https://url.westeurope.com/tenant/org-zzg-435832</a></td>
+</tr>
+<tr>
+<td>tenantId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID del tenant del VCloudDirector è l'identificatore univoco del tenant a cui ci si vuole connettere.</td>
+<td>org-zzg-435832</td>
+</tr>
+<tr>
+<td>token *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">Il token di autenticazione per il VCloudDirector è una stringa segreta che viene utilizzata per autenticare l'utente con il VCloudDirector</td>
+<td>aesZo6LextKTQx92VoRpyzaesZo6LextKT</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 18 – Campi specifici VCloud Director</p>
+<h5 id="parametri-vmware">Parametri VMWare</h5>
+<p>Funzionalità abilitate:</p>
+<ul>
+<li>
+<p>Recupero elementi di catalogo.</p>
+</li>
+<li>
+<p>Recupero elementi di inventario.</p>
+</li>
+<li>
+<p>Recupero delle metriche di utilizzo.</p>
+</li>
+<li>
+<p>Recupero dei costi delle risorse.</p>
+</li>
+<li>
+<p>Recupero delle informazioni di sicurezza.</p>
+</li>
+<li>
+<p>Provisioning di risorse.</p>
+</li>
+<li>
+<p>Provisioning di servizi.</p>
+</li>
+<li>
+<p>Provisioning di blueprint complesse.</p>
+</li>
+</ul>
+<p>I parametri specifici del sottosistema VMWare da inserire sono esposti
+nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image54.png" /></p>
+<p>Figura - Maschera di configurazione VMWare</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<p>[TABLE]</p>
+<p>Tabella 19 – Campi specifici Azure</p>
+<p>Per i provider on Premise, in particolare, vengono richiesti dati sulla
+capacità della infrastruttura, in modo tale che la SCMP possa effettuare
+dei calcoli preliminari in molteplici scenari.</p>
+<p>Per esempio, durante il provisioning, in modo tale da non superare la
+capacità massima consentita del provider.</p>
+<h4 id="verifica-della-connessione-e-salvataggio">Verifica della connessione e salvataggio</h4>
+<p>Per tutti i sottosistemi sono disponibili in basso nella pagina 3
+pulsanti (Figura 55):</p>
+<p>Il tasto “Chiudi” che permette di annullare l’inserimento di un nuovo
+sottosistema.</p>
+<p>Il tasto “Test Connection” serve ad effettuare un test di connessione
+utilizzando i parametri inseriti, in caso di errori il sistema ritorna
+un messaggio di errore che indica “Error: Unauthorized system” e il
+pulsante diventa di colore rosso, in caso contrario il pulsante
+diventerà verde e sarà possibile salvare il sottosistema utilizzando il
+tasto “Salva”.</p>
+<p><img alt="Immagine che contiene testo, schermata, Software multimediale,
+software Descrizione generata
+automaticamente" src="../images/extract/media/image55.png" /></p>
+<p>Figura - Pulsanti di connessione</p>
+<p>Al salvataggio, la SCMP comunicherà al modulo che gestisce quella
+tipologia di provider, di caricare all’interno del nostro bus (Kafka)
+tutti gli item relativi all’inventario, metriche, costi ed elementi di
+security.</p>
+<p>Lo stesso modulo, si occuperà successivamente di schedulare dei job per
+l’aggiornamento periodico di tutti gli asset presenti.</p>
+<p>Dopo aver salvato, apparirà una modale che informa l’utente che non è
+possibile eliminare un cloud provider prima delle 24 ore. Dalla modale,
+cliccare su “OK”. Dopo aver fatto ciò, l’utente si ritrova all’interno
+della pagina dei Cloud Provider.</p>
+<h4 id="visualizzazione-edit-ed-eliminazione-di-un-sottosistema">Visualizzazione edit ed eliminazione di un sottosistema</h4>
+<p>È possibile visualizzare i dati di un Cloud Provider, all’interno della
+lista, cliccare sul kebab menu in corrispondenza di un Cloud Provider, e
+cliccare su “Show” (Figura 56).</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor, nero Descrizione
+generata
+automaticamente" src="../images/extract/media/image56.png" /></p>
+<p>Figura 56- Accesso al Cloud Provider in modalità visualizzazione</p>
+<p>In questa pagina è possibile visualizzare la configurazione del Provider
+(Figura 57).</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium
+confidence" src="../images/extract/media/image57.png" /></p>
+<p>Figura 57 - Visualizzazione cloud in modalità visualizzazione</p>
+<p>Se il provider è di tipo “ON-PREMISE” sotto la configurazione sarà
+visibile una tabella che riporta le capacità utilizzabili sul sistema e
+la lista delle macchine già presenti sul provider (Figura <strong>58</strong>).</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium
+confidence" src="../images/extract/media/image58.png" /></p>
+<p>Figura 58 - Lista macchine On-Premise</p>
+<p>Per tornare alla pagina dei Cloud Provider, in basso a sinistra,
+cliccare sul pulsante “Close”.</p>
+<p>A questo punto, l’utente si ritroverà all’interno della pagina dei Cloud
+Provider.</p>
+<p>Per modificare i dati di un Cloud Provider, all’interno della lista,
+cliccare sul kebab menu in corrispondenza di un Cloud Provider, e
+cliccare su “Edit” (Figura 59).</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor, nero Descrizione
+generata
+automaticamente" src="../images/extract/media/image59.png" /></p>
+<p>Figura 59 - Accesso al Cloud Provider in modalità edit</p>
+<p>Fatto ciò, l’utente si ritroverà all’interno della pagina del Cloud
+Provider in modalità edit in cui è possibile modificare i dati. Per
+tornare alla pagina dei Cloud Provider, in basso a sinistra, cliccare
+sul pulsante “Save”. A questo punto, l’utente si ritroverà all’interno
+della pagina dei Cloud Provider.</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor, nero Descrizione
+generata
+automaticamente" src="../images/extract/media/image60.png" /></p>
+<p>Figura 60 - Avvio per l'eliminazione di un Cloud Provider</p>
+<p>Per eliminare un Cloud Provider, all’interno della lista, cliccare sul
+kebab menu in corrispondenza di un Cloud Provider, e cliccare su
+“Delete” (Figura 60).</p>
+<p><img alt="Immagine che contiene testo, monitor, screenshot, interni Descrizione
+generata
+automaticamente" src="../images/extract/media/image61.png" /></p>
+<p>Figura 61 - Conferma eliminazione del Cloud Provider</p>
+<p>Fatto ciò, apparirà una modale in cui è necessario cliccare sul pulsante
+“Remove” (Figura 61).</p>
+<p>A questo punto, il Cloud Provider non sarà più presente all’interno
+della lista e verrà lanciato il flusso di rimozione asset sul
+resource-manager.</p>
+<h4 id="modello-di-costo-per-i-provider-on-premise">Modello di costo per i provider “On-Premise”</h4>
+<p>Per gestire i costi dell’utilizzo delle risorse per i provider
+“On-Premise” viene data la possibilità di definire un modello di costo
+specifico per sottosistema.</p>
+<p>I provider che utilizzano questa funzionalità sono</p>
+<ul>
+<li>
+<p>VMWare</p>
+</li>
+<li>
+<p>VCloud Director</p>
+</li>
+</ul>
+<p>Per poter modificare il modello cliccare il pulsante “tre punti” in
+corrispondenza di un sottosistema e selezionare la voce “Cost model”.</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image62.png" /></p>
+<p>Figura - Accesso al cost model del sottosistema</p>
+<p>Nella pagina del modello possiamo indicare un costo orario di utilizzo
+per la CPU, la RAM e lo storage ed un eventuale ricarico da applicare su
+questi valori, inoltre possiamo notare in basso la data di modifica del
+modello, questo modello verrà successivamente utilizzato nelle altre
+funzionalità della SCMP per il calcolo dei costi.</p>
+<p>Per confermare la modifica cliccare il pulsante “Apply” in basso.</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image63.png" /></p>
+<h4 id="folders">Folders</h4>
+<h5 id="azure-folder">Azure Folder</h5>
+<p>Per consentire alla SCMP di sfruttare tutte le potenzialità offerte dal
+provider “Azure” è stata inserita la possibilità di configurare delle
+“Folders”</p>
+<p>Durante la creazione di un provider selezionando la tipologia “Azure”
+(5.6.1.2.7) possiamo notare la presenza di un campo esclusivo per il
+provider (Figura 63):</p>
+<ul>
+<li>Un box di conferma per indicare alla SCMP se il provider in
+  inserimento è una “Folder”.</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata Descrizione generata
+automaticamente" src="../images/extract/media/image64.png" /></p>
+<p>Figura - Opzione folder Azure</p>
+<p>I parametri specifici del sottosistema Azure da inserire sono esposti
+nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, software, Software multimediale, Software
+per la grafica Descrizione generata
+automaticamente" src="../images/extract/media/image65.png" /></p>
+<p>Figura - Maschera di configurazione Azure</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientId <strong>*</strong></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID univoco del client che si connette al sottosistema Azure Cloud. Questo ID viene utilizzato per identificare il client e per autorizzare l'accesso alle risorse del sottosistema.</td>
+<td>5a85c16c6ad-49db-a58e-e209-ee11f53d6c6b</td>
+</tr>
+<tr>
+<td>clientSecret *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">La chiave segreta del client, utilizzata per autenticare il client con il sottosistema Azure Cloud. La chiave segreta deve essere tenuta segreta e non deve essere condivisa con nessuno.</td>
+<td>np6Kc_.xwsvhR8Q~rP05fCqYNXmbqfMGQLOEzfMt</td>
+</tr>
+<tr>
+<td>tenantId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID del tenant Azure a cui appartiene il sottosistema Azure Cloud. Il tenant è un'entità organizzativa in Azure che rappresenta un'azienda o un'organizzazione.</td>
+<td>884147733-ff13-4783-a765-834183773083</td>
+</tr>
+<tr>
+<td>usageAggregation</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Indica se l'aggregazione per "usage" è abilitata per la sottoscrizione. Quando questa spunta viene abilitata i costi del sottosistema verranno raggruppati per Tipologia risorsa</td>
+<td>false</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>5</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+<tr>
+<td>clientId</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID univoco del client che si connette al sottosistema Azure Cloud. Questo ID viene utilizzato per identificare il client e per autorizzare l'accesso alle risorse del sottosistema.</td>
+<td>5a85c16c6ad-49db-a58e-e209-ee11f53d6c6b</td>
+</tr>
+<tr>
+<td>datsFirstCostRecover</td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">Inserire il numero di giorni precedenti alla data di creazione dei quali bisogna recuperare i costi al primo avvio del sottosistema</td>
+<td>15</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 20 – Campi specifici Azure Folder</p>
+<h5 id="google-cloud-folders">Google Cloud Folders</h5>
+<p>Per consentire alla SCMP di sfruttare tutte le potenzialità offerte dal
+provider “Google Cloud” è stata inserita la possibilità di configurare
+delle “Folders” e la possibilità di importare il file generato dalla
+console del provider così da semplificare l’inserimento dello stesso.</p>
+<p>Durante la creazione di un provider selezionando la tipologia “Google
+Cloud” (5.6.1.2.7) possiamo notare la presenza di 2 campi esclusivi per
+il provider (Figura 65):</p>
+<ol>
+<li>
+<p>Un box di conferma per indicare alla SCMP se il provider in
+    inserimento è una “Folder”.</p>
+</li>
+<li>
+<p>Un box dove, cliccando all’ interno sarà possibile, tramite la
+    finestra di selezione file di windows inserire il file di tipo
+    “JSON” esportato direttamente dalla console Google.</p>
+</li>
+</ol>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image66.png" /></p>
+<p>Figura 65 – Parametri specifici di Google Cloud</p>
+<p>I parametri specifici della Google Folder da inserire sono esposti nella
+tabella:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>serviceAccount</td>
+<td style="text-align: center;">object</td>
+<td style="text-align: center;">File di connessione generato dalla console Google</td>
+<td>service_account.json</td>
+</tr>
+<tr>
+<td>costExportDatasetID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserire l’id del dataset da utilizzare per il recupero delle informazioni</td>
+<td>Projectid.dataset.table</td>
+</tr>
+<tr>
+<td>usageAggregation</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Indica se l'aggregazione per "usage" è abilitata per la sottoscrizione. Quando questa spunta viene abilitata i costi del sottosistema verranno raggruppati per Tipologia risorsa</td>
+<td>false</td>
+</tr>
+<tr>
+<td>catalogPriceDiscount</td>
+<td style="text-align: center;">integer</td>
+<td style="text-align: center;">Inserisci qui uno sconto/maggiorazione da applicare sui prezzi del catalogo per tutte le risorse che non hanno una relazione SCMP</td>
+<td>-20</td>
+</tr>
+<tr>
+<td>odlID</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id dell'ordine di lavoro che verrà associato al sottosistema e verrà inserito come tag su tutte le risorse del sottosistema</td>
+<td>ODL001</td>
+</tr>
+<tr>
+<td>datsFirstCostRecover</td>
+<td style="text-align: center;">int</td>
+<td style="text-align: center;">Inserire il numero di giorni precedenti alla data di creazione dei quali bisogna recuperare i costi al primo avvio del sottosistema</td>
+<td>15</td>
+</tr>
+<tr>
+<td>CostinUSD</td>
+<td style="text-align: center;">boolean</td>
+<td style="text-align: center;">Se abilitato verranno salvati sul Database anche i costi del provider utilizzando la valuta USD</td>
+<td>false</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 21 – Campi specifici Google Folder</p>
+<p>Il campo “ServiceAccount” è formato dai campi indicati nel paragrafo
+5.6.1.2.7 e può essere inserito automaticamente effettuando l’upload del
+file o manualmente inserendo i campi disponibili nel form.</p>
+<p>Dopo aver configurato un sistema di tipo “Folder” esso verrà
+visualizzato sia nella lista dei cloud provider(Figura 66),sia nella
+pagina delle folder.</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image67.png" /></p>
+<p>Figura - Visualizzazione delle folder</p>
+<p>Dalla pagina di “Cloud System” del modulo di “Administration” cliccare
+in alto a destra il tab “Folders” (Figura 67) dove verrà visualizzata la
+lista delle folder configurate nel tenant.</p>
+<p>All’interno della pagina è possibile effettuare le stesse operazioni di
+visualizzazione modifica e eliminazione delle folder effettuate sulla
+pagina dei “Cloud Provider” (5.6.1.4)</p>
+<p><img alt="Immagine che contiene schermata, testo, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image68.png" /></p>
+<p>Figura 67 – Accesso a Folders</p>
+<p>Accedendo ad una “Folder” in modalità “View” scorrendo in basso nella
+pagina possiamo visualizzare la lista dei sottosistemi presenti nel
+provider e le relative informazioni sullo status :</p>
+<ul>
+<li>
+<p>In verde possiamo notare un sottosistema configurato correttamente nel
+  provider e che la SCMP provvede ad inserire automaticamente nel
+  sistema e sarà visibile nella sezione “Cloud Providers” e in tutte le
+  funzionalità della SCMP.</p>
+</li>
+<li>
+<p>In rosso possiamo notare un sottosistema configurato in maniera errata
+  che, dopo le opportune modifiche dalla console di “Google Cloud”,
+  potrà essere accettato dalla SCMP.</p>
+</li>
+</ul>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image69.png" /></p>
+<p>Figura 68 – Visualizzazione sottosistemi della Folder</p>
+<h3 id="siem">SIEM</h3>
+<p>L’utente può creare un provider di tipo SIEM, cliccando sul tab che
+raffigura uno scudo, posizionato nella barra in alto, d0opo aver
+effettuato l’accesso alla pagina “Cloud SIEMs”, in alto a destra,
+cliccare sull’hamburger menu e poi cliccare su “Attach a SIEM” (Figura
+69).</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium
+confidence" src="../images/extract/media/image70.png" /></p>
+<p>Figura 69 - Creazione di un cloud provider SIEM</p>
+<p>All’interno della pagina “Add SIEM” (Figura 70), compilare tutti i campi
+della sezione “General properties”. Dopo aver fatto questo, compilare
+tutti i campi della sezione “SIEM’s properties” seguendo la tabella.</p>
+<p><img alt="Immagine che contiene testo, monitor, screenshot, schermo Descrizione
+generata
+automaticamente" src="../images/extract/media/image71.png" /></p>
+<p>Figura 70 - Compilazione del form per la creazione di un provider SIEM</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Identificativo univoco del SIEM al quale connettersi , Fornito dal SIEM durante la registrazione dell'applicazione</td>
+<td>1b16698f-2df5-ed44-86b9ed-4b42c 1fe7ad9</td>
+</tr>
+<tr>
+<td>clientSecret *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">Il secret da utilizzare per la connessione, fornito dal SIEM durante la registrazione dell'applicazione</td>
+<td>1b16698f-2df5-ed44-86b9ed-4b42c 1fe7ad9</td>
+</tr>
+<tr>
+<td>resourceGroup *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Il gruppo di risorse Azure in cui è ospitato il SIEM</td>
+<td>myGroup</td>
+</tr>
+<tr>
+<td>subscriptionId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID sottoscrizione Azure associata al SIEM</td>
+<td>1b16698f-2df5-ed44-86b9ed-4b42c 1fe7ad9</td>
+</tr>
+<tr>
+<td>tenantId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID tenant Azure associato al SIEM</td>
+<td>1b16698f-2df5-ed44-86b9ed-4b42c 1fe7ad9</td>
+</tr>
+<tr>
+<td>workspaceID*</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID dell'area di lavoro Log Analytics associata al SIEM</td>
+<td>1b16698f-2df5-ed44-86b9ed-4b42c 1fe7ad9</td>
+</tr>
+<tr>
+<td>workspaceName*</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Il nome dell'area di lavoro Log Analytics associata al SIEM</td>
+<td>theWorkspaceName</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 22 – Campi specifici SENTINEL</p>
+<p>Infine, in basso a destra, cliccare sul pulsante “Save”. Dopodiché, in
+basso appare un popup di avvenuta creazione del SIEM e l’utente viene
+reindirizzato all’interno della lista dei SIEM.</p>
+<h4 id="visualizzazione-modifica-ed-eliminazione">Visualizzazione, modifica ed eliminazione</h4>
+<p>Per visualizzare un SIEM, in corrispondenza di un suddetto, cliccare sul
+kebab menu e poi cliccare su “Show” (Figura 71). A questo punto,
+l’utente si ritrova all’interno della pagina “Show SIEM” in cui è
+possibile visualizzare ma non modificare i dati (Figura 72). Dopo aver
+visualizzato i dati, in basso a destra, cliccare sul pulsante “Close”.
+Fatto questo, l’utente si ritrova all’interno della lista dei SIEM.</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor Descrizione generata
+automaticamente" src="../images/extract/media/image72.png" /></p>
+<p>Figura 71 - Accesso al SIEM in modalità visualizzazione</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../images/extract/media/image73.png" /></p>
+<p>Figura 72 - SIEM in modalità visualizzazione</p>
+<p>Per modificare un SIEM, in corrispondenza di un suddetto, cliccare sul
+kebab menu e poi cliccare su “Edit” (Figura 73). A questo punto, ci si
+ritrova all’interno della pagina “Edit SIEM” in cui è possibile
+modificare i campi (Figura 74).</p>
+<p>Dopo aver modificato i campi di interesse, in basso a destra, cliccare
+sul pulsante “Update”. Fatto ciò, in basso appare un popup di avvenuta
+modifica del SIEM e l’utente si ritrova all’interno della lista dei
+SIEM.</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor Descrizione generata
+automaticamente" src="../images/extract/media/image74.png" /></p>
+<p>Figura 73 - Accesso al SIEM in modalità edit</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../images/extract/media/image75.png" /><img alt="A
+picture containing appliance, screenshot Description automatically
+generated" src="../images/extract/media/image76.png" /></p>
+<p>Figura 74 - SIEM in modalità edit</p>
+<p>Per eliminare un SIEM, in corrispondenza di un suddetto, cliccare sul
+kebab menu e poi cliccare su “Delete” (Figura 75). A questo punto appare
+una modale in cui è necessario cliccare sul pulsante “Remove” (Figura
+76). Fatto questo, il SIEM non è più presente all’interno della lista.</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor Descrizione generata
+automaticamente" src="../images/extract/media/image77.png" /></p>
+<p>Figura 75 - Opzione per eliminare un SIEM "Delete"</p>
+<p><img alt="Immagine che contiene testo, screenshot, monitor Descrizione generata
+automaticamente" src="../images/extract/media/image78.png" /></p>
+<p>Figura 76 - Conferma per eliminare un SIEM</p>
+<h3 id="secrets-managers">Secrets Managers</h3>
+<p>L’utente può creare un secret manager cliccando sul tab che raffigura un
+lucchetto, posizionato nella barra in alto, come mostrato in figura
+(Figura 77).</p>
+<p>Dopo aver effettuato l’accesso alla pagina “Secret manager”, in alto a
+destra, cliccare sull’hamburger menu e poi cliccare su “Add a secret
+manager” (Figura 77).</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium
+confidence" src="../images/extract/media/image79.png" /></p>
+<p>Figura 77 - Aggiunta di un nuovo Secret Manager</p>
+<p>Qui un esempio di form nel caso di aggiunta di un Secret manager dal
+provider di tipo Azure (selezionabile dal dropdown “Type” in alto nella
+pagina).</p>
+<p>Dopo aver inserito tutti i parametri richiesti, in basso, cliccare il
+tasto “Save” per concludere l’inserimento e l’utente viene reindirizzato
+alla lista dei “Secret manager” dove è possibile visualizzare il
+componente appena creato.</p>
+<h4 id="azure-key-vault">Azure key vault</h4>
+<p>I parametri specifici (Figura 44) per un Azure key vault da inserire
+sono esposti nella tabella</p>
+<p><img alt="Immagine che contiene schermata, testo Descrizione generata
+automaticamente" src="../images/extract/media/image80.png" /></p>
+<p>Figura - Maschera di configurazione Azure key vault</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clientId <strong>*</strong></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Identificativo univoco del key vault</td>
+<td>09f8985-9f89d0-4623-98982-5a510fd3d2</td>
+</tr>
+<tr>
+<td>clientSecret *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">Una chiave segreta utilizzata per autenticare l'applicazione con il Key Vault</td>
+<td>np6Kc_.xwsvhR8Q~rP05fCqYNXmbqfMGQLOEzfMt</td>
+</tr>
+<tr>
+<td>resourceGroup *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Il gruppo di risorse Azure in cui è ospitato il Key Vault</td>
+<td>resoruceGroupName</td>
+</tr>
+<tr>
+<td>subscriptionId *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID sottoscrizione Azure associata al Key Vault</td>
+<td>09f8985-9f89d0-4623-98982-5a510fd3d2</td>
+</tr>
+<tr>
+<td>tenantId</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID tenant Azure associato al Key Vault</td>
+<td>09f8985-9f89d0-4623-98982-5a510fd3d2</td>
+</tr>
+<tr>
+<td>privateUrl</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">URL privato di accesso al key Vault</td>
+<td>https://vault.azure.net/vault</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 23 – Campi specifici Azure key vault</p>
+<h4 id="google-secret-manager">Google Secret Manager</h4>
+<p>I parametri specifici (Figura 44) del Google Secret Manager da inserire
+sono esposti nella tabella seguente:</p>
+<p><img alt="Immagine che contiene testo, schermata Descrizione generata
+automaticamente" src="../images/extract/media/image81.png" /></p>
+<p>Figura - Maschera di configurazione Google Secret Manager</p>
+<p>Vengono indicati con * i parametri obbligatori</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>kmsProjectId <strong>*</strong></td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">l'ID del progetto Google Cloud Platform (GCP) associato al servizio Google Cloud Key Management Service (KMS).</td>
+<td>5a85c16c6ad-49db-a58e-e209-ee11f53d6c6b</td>
+</tr>
+<tr>
+<td>serviceAccount *</td>
+<td style="text-align: center;">object</td>
+<td style="text-align: center;">File di connessione generato dalla console Google</td>
+<td>service_account.json</td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 24 – Campi specifici Google Secret Manager</p>
+<p>È possibile inserire manualmente sul form visualizzato i parametri
+presenti nel file “service_account.json” se non si vuole effettuarne
+l’upload, tutti i parametri sono obbligatori:</p>
+<table>
+<thead>
+<tr>
+<th><strong>Nome</strong></th>
+<th style="text-align: center;"><strong>Tipo</strong></th>
+<th style="text-align: center;"><strong>Descrizione</strong></th>
+<th><strong>Esempio</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Type</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserire il nome della tipologia di autenticazione configurata</td>
+<td>service_account</td>
+</tr>
+<tr>
+<td>project_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id univoco del progetto associato al service account</td>
+<td>Theproject-367810</td>
+</tr>
+<tr>
+<td>private_key_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">Inserisci qui l'id univoco della chiave privata del service account</td>
+<td>55cb5cf903ee93ea1e9c294a07e46e0af0633e6</td>
+</tr>
+<tr>
+<td>private_key *</td>
+<td style="text-align: center;">password</td>
+<td style="text-align: center;">Contiene la chiave privata del service account in formato PEM. È fondamentale per l'autenticazione del service account alle API di Google Cloud</td>
+<td>-----BEGIN PRIVATE KEY-----MIIJQgIBADANB…</td>
+</tr>
+<tr>
+<td>client_e-mail *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'indirizzo email univoco del service account. È utilizzato per identificare il service account quando si autentica alle API di Google Cloud</td>
+<td><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#117;&#115;&#101;&#114;&#64;&#100;&#111;&#109;&#105;&#110;&#105;&#111;&#46;&#99;&#111;&#109;">&#117;&#115;&#101;&#114;&#64;&#100;&#111;&#109;&#105;&#110;&#105;&#111;&#46;&#99;&#111;&#109;</a></td>
+</tr>
+<tr>
+<td>client_id *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'ID client del service account. È un identificatore univoco utilizzato per identificare il service account in Google Cloud</td>
+<td>104822473261100667392</td>
+</tr>
+<tr>
+<td>auth_uri *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URI utilizzato per l'autenticazione del service account alle API di Google Cloud</td>
+<td>https://accounts.google.com/o/oauth2/auth</td>
+</tr>
+<tr>
+<td>token_uri *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URI utilizzato per ottenere un token di accesso per il service account</td>
+<td>https://oauth2.googleapis.com/token</td>
+</tr>
+<tr>
+<td>auth_provider_x509_cert_url*</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URL del certificato X.509 utilizzato per l'autenticazione del service account</td>
+<td>https://www.googleapis.com/oauth2/v1/certs</td>
+</tr>
+<tr>
+<td>client_x509_cert_url *</td>
+<td style="text-align: center;">string</td>
+<td style="text-align: center;">L'URL del certificato X.509 nel client</td>
+<td><a href="https://www.googleapis.com/robot/v1/metadata/f543/myserviceaccount%40projectName.gserviceaccount.com">https://www.googleapis.com/robot/v1/metadata/f543/myserviceaccount%40projectName.gserviceaccount.com</a></td>
+</tr>
+</tbody>
+</table>
+<p>Tabella 25 – Campi specifici obbligatori del file “service_account.json”</p>
+<h3 id="commvault">CommVault</h3>
+<p>Viene data la possibilità all’ utente di inserire all’ interno della
+SCMP una connessione con un CommVault per permettere successivamente il
+recupero e la visualizzazione delle informazioni relative ai backup e
+alle operazioni effettuate dal Vault.</p>
+<p>Per accedere a questa funzionalità è necessario selezionare il tab
+“CommVault” disponibile in alto nella funzionalità “Administration” .</p>
+<p>Verremo riportati alla pagina che contiene la lista di tutti i
+“CommVault” configurati e cliccando sul menù presente sulla destra sarà
+possibile aggiungere un nuovo CommVault (Figura 80)</p>
+<p><img alt="" src="../images/extract/media/image82.png" /></p>
+<p>Figura - Accesso a CommVault</p>
+<p>In questa pagina , dopo aver inserito le credenziali di accesso
+(indirizzo ip, utenza e password) possiamo cliccare sul pulsante “Test
+connection” per confermare il corretto inserimento dei dati e
+successivamente confermare l’inserimento tramite il pulsante “Save”
+(Figura 81)</p>
+<p><img alt="Immagine che contiene testo, schermata, software, Software
+multimediale Descrizione generata
+automaticamente" src="../images/extract/media/image83.png" /></p>
+<p>Figura - Creazione della connessione ad un CommVault</p>
+<h3 id="visualizzazione-modifica-ed-eliminazione_1">Visualizzazione , modifica ed eliminazione</h3>
+<p>È possibile visualizzare i dati di un Secret manager, all’interno della
+lista, cliccando sul kebab menu in corrispondenza di un manager, e
+successivamente su “Show” (Figura 82).</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../images/extract/media/image84.png" /></p>
+<p>Figura 82 - Accesso al manager in modalità visualizzazione</p>
+<p>In questa pagina è possibile visualizzare la configurazione del Provider
+(Figura 83).</p>
+<p><img alt="A picture containing screenshot, text Description automatically
+generated" src="../images/extract/media/image85.png" /></p>
+<p>Figura 83 - Visualizzazione manager in modalità visualizzazione</p>
+<p>Per tornare alla pagina dei Secret manager, in basso a sinistra,
+cliccare sul pulsante “Close”.</p>
+<p>A questo punto, l’utente si ritroverà all’interno della pagina dei
+Secret manager.</p>
+<p>Per modificare i dati di un Secret manager all’interno della lista,
+cliccare sul kebab menu in corrispondenza di un Cloud Provider, e
+cliccare su “Edit” (Figura 84).</p>
+<p><img alt="A screenshot of a computer Description automatically generated with
+medium
+confidence" src="../images/extract/media/image86.png" /></p>
+<p>Figura 84 - Accesso al manager in modalità edit</p>
+<p>Fatto ciò, l’utente si ritroverà all’interno della pagina del Cloud
+Provider in modalità edit in cui è possibile modificare i dati. Per
+tornare alla pagina dei Cloud Provider, in basso a sinistra, cliccare
+sul pulsante “Save”. A questo punto, l’utente si ritroverà all’interno
+della pagina dei Cloud Provider.</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../images/extract/media/image87.png" /></p>
+<p>Figura 85 - Avvio per l'eliminazione di un Secret manager</p>
+<p>Per eliminare un <strong><em>Secret manager</em></strong>, all’interno della lista, cliccare
+sul kebab menu in corrispondenza di un Secret manager, e cliccare su
+“Delete” (Figura 85).</p>
+<p>Fatto ciò, apparirà una modale in cui è necessario cliccare sul pulsante
+“Remove” (Figura 86).</p>
+<p>A questo punto, il Secret manager non sarà più presente all’interno
+della lista e verrà lanciato il flusso di rimozione asset sul
+resource-manager.</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="../images/extract/media/image88.png" /></p>
+<p>Figura 86 - Conferma eliminazione del Secret manager</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
