@@ -1,0 +1,2410 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <meta name="author" content="Martin Donath">
+      
+      
+        <link rel="canonical" href="https://mkdocs-material.github.io/example-versioning/1.1/Provisioning/">
+      
+      
+        <link rel="prev" href="../Procedure%20di%20trattamento/">
+      
+      
+        <link rel="next" href="../Questa%20guida%20di%20riferimento%20rapido/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.44">
+    
+    
+      
+        <title>Provisioning - My Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0253249f.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#dashboard" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <div data-md-color-scheme="default" data-md-component="outdated" hidden>
+        
+          <aside class="md-banner md-banner--warning">
+            <div class="md-banner__inner md-grid md-typeset">
+              
+  You're not viewing the latest version.
+  <a href="../..">
+    <strong>Click here to go to latest.</strong>
+  </a>
+
+            </div>
+            <script>var el=document.querySelector("[data-md-component=outdated]"),outdated=__md_get("__outdated",sessionStorage);!0===outdated&&el&&(el.hidden=!1)</script>
+          </aside>
+        
+      </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="My Docs" class="md-header__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            My Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Provisioning
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="My Docs" class="md-nav__button md-logo" aria-label="My Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    My Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/giammy96/CMPmdReader/import" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    mkdocs-material/example-versioning
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Acronimi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Acronimi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Administration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Administration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ambiente%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ambiente software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Assistenza%20e%20segnalazione%20dei%20problemi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Assistenza e segnalazione dei problemi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Authentication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Authentication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Avvio%20di%20una%20sessione/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Avvio di una sessione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backup%20Disaster%20Recovery/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup Disaster Recovery
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backup%20dei%20dati/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Backup dei dati
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Catalog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Catalog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Cloud%20Maturity%20Model/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Cloud Maturity Model
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Contingenze%20e%20stati%20modalit%20di%20funzionamento%20alternativi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contingenze e stati modalit di funzionamento alternativi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Convenzioni/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Convenzioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Costs%20e%20Usage/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Costs e Usage
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Dashboard/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Dashboard
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Definizioni/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Definizioni
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documenti%20applicabili/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documenti applicabili
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Documenti%20di%20riferimento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Documenti di riferimento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Funzionalit%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Funzionalit software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Gestione%20Tenant/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Gestione Tenant
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Identificazione/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Identificazione
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Informazioni%20generali%20sul%20documento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informazioni generali sul documento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Informazioni%20generali%20sul%20sistema/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Informazioni generali sul sistema
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Interruzione%20e%20sospensione%20del%20lavoro/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Interruzione e sospensione del lavoro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inventario%20del%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventario del software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Inventory/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Inventory
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Messaggi/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Messaggi
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Monitoring/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Monitoring
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Organizzazione%20del%20software%20e%20panoramica%20del%20funzionamento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Organizzazione del software e panoramica del funzionamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Primo%20utilizzo%20del%20software/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Primo utilizzo del software
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Procedure%20di%20trattamento/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Procedure di trattamento
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Provisioning
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Provisioning
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifiche-della-tabella-dei-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifiche della tabella dei provisioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifiche della tabella dei provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources-services-custom-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Resources", "Services", "Custom Services"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-dei-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione dei provisioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione dei provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-di-risorse-fisiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning di "Risorse fisiche"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning di "Risorse fisiche"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Machines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-di-servizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning di "Servizi"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning di "Servizi"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servizi-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "standard"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "Custom"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-azure-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "Azure Pipeline"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-paas-e-ai-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "PaaS" e "AI Services"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-una-richiesta-di-provisioning-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione di una richiesta di provisioning "Blueprint"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione di una richiesta di provisioning "Blueprint"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#richiesta-di-esecuzione-della-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Richiesta di esecuzione della "Blueprint"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-di-gestione-della-blueprint-da-completare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagina di gestione della blueprint "da completare"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagina di gestione della blueprint "da completare"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-automatici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step automatici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-manuali" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step manuali
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifica-di-un-provisioning-effettuato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifica di un provisioning effettuato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Questa%20guida%20di%20riferimento%20rapido/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Questa guida di riferimento rapido
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Recupero%20da%20errori%20malfunzionamenti%20ed%20emergenze/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Recupero da errori malfunzionamenti ed emergenze
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../SCMP%20--%20VARIE/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SCMP    VARIE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security%20e%20privacy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security e privacy
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Security
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Service%20Detail%20Design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Service Detail Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Trattamento%20correlato/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Trattamento correlato
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dashboard
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#specifiche-della-tabella-dei-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Specifiche della tabella dei provisioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Specifiche della tabella dei provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resources-services-custom-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      "Resources", "Services", "Custom Services"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Blueprint
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creazione-dei-provisioning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione dei provisioning
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione dei provisioning">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-di-risorse-fisiche" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning di "Risorse fisiche"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning di "Risorse fisiche"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#virtual-machines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Virtual Machines
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provisioning-di-servizi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisioning di "Servizi"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisioning di "Servizi"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#servizi-standard" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "standard"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-custom" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "Custom"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-azure-pipeline" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "Azure Pipeline"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#servizi-paas-e-ai-services" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servizi "PaaS" e "AI Services"
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#creazione-di-una-richiesta-di-provisioning-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Creazione di una richiesta di provisioning "Blueprint"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Creazione di una richiesta di provisioning "Blueprint"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#richiesta-di-esecuzione-della-blueprint" class="md-nav__link">
+    <span class="md-ellipsis">
+      Richiesta di esecuzione della "Blueprint"
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pagina-di-gestione-della-blueprint-da-completare" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pagina di gestione della blueprint "da completare"
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pagina di gestione della blueprint "da completare"">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#step-automatici" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step automatici
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#step-manuali" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step manuali
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifica-di-un-provisioning-effettuato" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modifica di un provisioning effettuato
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  <h1>Provisioning</h1>
+
+<p>Il provisioning è una delle funzionalità più importanti della
+SCMP,Attraverso questi moduli, è possibile allocare degli asset runtime
+all'interno dei provider gestiti dalla SCMP.</p>
+<p>Per poter utilizzare questa funzionalità è necessario che all' interno
+della SCMP siano definite delle relazioni (5.9.1.1.3)</p>
+<p>Questo vincolo è stato reso disponibile per blindare l'associazione di
+certe caratteristiche al provisioning, ad esempio, la size della VM non
+è selezionabile durante il provisioning ma rientra in quelle
+caratteristiche predefinite dagli amministratori, all' interno del
+catalogo.</p>
+<figure>
+<img src="/images/extract/media/image6.png"
+style="width:1.69792in;height:5.77128in"
+alt="A screenshot of a phone Description automatically generated with low confidence" />
+<figcaption><p><span id="_Toc169789867" class="anchor"></span>Figura 283
+- Accesso a "Provisioning"</p></figcaption>
+</figure>
+
+<h3 id="dashboard">Dashboard</h3>
+<p>Accedendo alla funzionalità la prima pagina disponibile è la Dashboard
+dei provisioning effettuati all'interno del sistema.</p>
+<p>La pagina si presenta con una serie di grafici, filtri e l'elenco dei
+provisioning effettuati.</p>
+<p>I grafici permettono di visualizzare le informazioni presenti in tabella
+raggruppate per:</p>
+<ul>
+<li>
+<p>Il totale di tutti i provisioning effettuati suddivisi per
+    tipologia;</p>
+</li>
+<li>
+<p>Lo stato dei provisioning effettuati suddivisi per esito e categoria
+    dell' asset provisionato</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image261.png"
+style="width:6.69306in;height:3.30486in"
+alt="A screenshot of a computer Description automatically generated with medium confidence" />
+<figcaption><p><span id="_Toc169789868" class="anchor"></span>Figura 284
+– Grafici della pagina di provisioning</p></figcaption>
+</figure>
+
+<p>In basso nella pagina possiamo utilizzare la sezione filtri per
+modificare i risultati presenti nella tabella, il filtro "Provisioning
+Type" (Figura 285)è il filtro principale che permette di selezionare la
+tipologia di asset da visualizzare, nello specifico:</p>
+<ul>
+<li>
+<p>Selezionando "Resources" viene aggiunto un filtro che permette di
+    selezionare il tipo di risorsa di cui si vuole visualizzare lo stato
+    dei provisioning di default, il sistema mostra la lista di VM
+    provvisionate.</p>
+</li>
+<li>
+<p>Selezionando "Services" e "Custom services" non ci sono filtri
+    aggiuntivi e la lista viene aggiornata con i soli provisioning
+    relativi ai Servizi</p>
+</li>
+<li>
+<p>Selezionando "Blueprint" viene aggiunto un filtro che permette di
+    cambiare il flusso (cioè la tipologia di blueprint da visualizzare)
+    e la tabella viene modificata per visualizzare solo i flussi non
+    ancora completati, sopra la tabella è presente un controllo che
+    permette di cambiare tab, per passare dai flussi "in corso" ai
+    flussi "Completati" (Figura 289).</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image262.png"
+style="width:6.69306in;height:3.28153in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173156935" class="anchor"></span>Figura 285
+– Filtro per tipologia di asset</p></figcaption>
+</figure>
+
+<h3 id="specifiche-della-tabella-dei-provisioning">Specifiche della tabella dei provisioning</h3>
+<h4 id="resources-services-custom-services">"Resources", "Services", "Custom Services"</h4>
+<p>L'elenco ha i seguenti attributi, quando viene selezionato come filtro
+"Resources", "Services", "Custom Services" (Figura 286)</p>
+<ul>
+<li>
+<p>Uuid, Identificativo del provisioning;</p>
+</li>
+<li>
+<p>Data di completamento del provisioning;</p>
+</li>
+<li>
+<p>Data di richiesta del provisioning;</p>
+</li>
+<li>
+<p>Utente che ha creato l'istanza;</p>
+</li>
+<li>
+<p>Status;</p>
+</li>
+<li>
+<p>Output dei sistemi di provisioning;</p>
+</li>
+<li>
+<p>Json di dettaglio del provisioning effettuato;</p>
+</li>
+<li>
+<p>Informazioni sullo stato;</p>
+</li>
+<li>
+<p>Tipo di risorsa.</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image263.png"
+style="width:6.69306in;height:3.32917in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref173156943" class="anchor"></span>Figura 286
+- Tabella “Resources”</p></figcaption>
+</figure>
+
+<p>Quando siamo in questa visualizzazione è possibile effettuare le
+seguenti operazioni:</p>
+<ul>
+<li>
+<p>Cliccando sulla riga di un provisioning fallito è possibile
+    modificarlo e rieseguirlo</p>
+</li>
+<li>
+<p>Cliccando sull' icona "Output Message) in corrispondenza di un
+    provisioning è possibile visualizzare la risposta ricevuta dal
+    modulo di "Terraform" (Figura 287).</p>
+</li>
+<li>
+<p>Cliccando il tasto "Download" è possibile scaricare i file
+    restituiti dalla funzionalità.</p>
+</li>
+<li>
+<p>Cliccando il tasto "State" è possibile visualizzare il grafico e la
+    lista delle risorse provvisionate (Figura 288).</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image264.png"
+style="width:6.69306in;height:3.35556in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref173157022" class="anchor"></span>Figura 287
+- Visualizzazione messaggio Terraform</p></figcaption>
+</figure>
+
+<figure>
+<img
+src="/images/extract/media/image265.png"
+style="width:6.69306in;height:3.38333in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref173157027" class="anchor"></span>Figura 288
+- Visualizzazione grafico risorse</p></figcaption>
+</figure>
+
+<h4 id="blueprint">Blueprint</h4>
+<p>L'elenco ha i seguenti attributi, quando viene selezionato come filtro
+"Blueprint" (Figura 289)</p>
+<ul>
+<li>
+<p>Nome della blueprint</p>
+</li>
+<li>
+<p>Data di creazione</p>
+</li>
+<li>
+<p>Utente che ha effettuato il provisioning della blueprint</p>
+</li>
+</ul>
+<blockquote>
+<p>Sopra la tabella possiamo notare due tab, cliccando su di essi la
+tabella viene filtrata rispettivamente per Blueprint da completare e
+Blueprint completate (in rosso nell' immagine)</p>
+</blockquote>
+<figure>
+<img
+src="/images/extract/media/image266.png"
+style="width:6.42395in;height:3.14774in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173156979" class="anchor"></span>Figura 289
+– Tab della tabella “Provisioning blueprint”</p></figcaption>
+</figure>
+
+<p>In questa visualizzazione è possibile cliccare su una riga della tabella
+per visualizzare i dettagli della blueprint.</p>
+<p>Quando la blueprint selezionata è "da completare" verremo riportati
+nella pagina di provisioning blueprint (Figura 290) dove potremo
+effettuare le operazioni necessarie al completamento, per i dettagli
+consultare la sezione(5.13.3.3.2).</p>
+<figure>
+<img
+src="/images/extract/media/image267.png"
+style="width:6.96875in;height:3.36247in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157051" class="anchor"></span>Figura 290
+– Visualizzazione flow “Da completare”</p></figcaption>
+</figure>
+
+<p>Se viene selezionata invece una blueprint completata verremo riportati
+nella pagina di dettaglio del provisioing della blueprint dove non verra
+visualizzato il "flow" di previsione perché gia completato.(Figura 291)</p>
+<figure>
+<img
+src="/images/extract/media/image268.png"
+style="width:6.78375in;height:3.34375in"
+alt="Immagine che contiene software, Software multimediale, testo, Software per la grafica Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157061" class="anchor"></span>Figura 291
+– Visualizzazione flow “Completato”</p></figcaption>
+</figure>
+
+<h3 id="creazione-dei-provisioning">Creazione dei provisioning</h3>
+<h4 id="provisioning-di-risorse-fisiche">Provisioning di "Risorse fisiche"</h4>
+<p>Utilizzando i tab presenti nella funzionalità di provisioning(Figura
+292). è possibile visualizzare le liste di risorse provvisionabili all'
+interno della SCMP, come ad esempio Virtual Machines, Storage e
+Kuberneetes.</p>
+<p>Per poter visualizzare degli elementi all' interno delle liste di
+risultati (Figura 292). è necessario che nel catalogo SCMP sia presente
+una relazione con la risorsa di catalogo del provider da
+provvisionare(5.9.1.1.3)</p>
+<p>Le funzionalità disponibili per questi elementi sono identiche, cambiano
+solo i parametri da inserire negli step di creazione.</p>
+<figure>
+<img
+src="/images/extract/media/image269.png"
+style="width:6.6875in;height:3.33333in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref165992037" class="anchor"></span>Figura -
+Tab per la creazione di risorse</p></figcaption>
+</figure>
+
+<h5 id="virtual-machines">Virtual Machines</h5>
+<p>Per iniziare il provisioning di una risorsa cliccare sulla riga
+corrispondente per visualizzare la pagina contenente lo step 1 della
+creazione di un provisioning (Figura 293), in questo step è necessario
+selezionare, tramite il dropdown presente sulla sinistra, il
+sottosistema "target" nel quale si vogliono provvisionare le risorse,
+una volta selezionato verrà visualizzato sulla destra uno specchietto
+informativo che indica le caratteristiche della risorsa che verrà
+provisionata, per continuare In basso a destra, cliccare sul pulsante
+"Next" per passare alla pagina dello step 2 "Config" (Figura 294).</p>
+<figure>
+<img
+src="/images/extract/media/image270.png"
+style="width:6.89097in;height:2.79306in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157084" class="anchor"></span>Figura 293
+– Selezione del sottosistema “target”, provisioning step
+1</p></figcaption>
+</figure>
+
+<p>Nella pagina "Config" dello step 2 (Figura 294), compilare tutti i campi
+obbligatori di tutte le sezioni del form. In basso a sinistra, cliccare
+sul pulsante "Reset" per resettare tutti i campi della pagina.</p>
+<p>Invece a destra, cliccare sul pulsante "Submit" per passare allo step 3
+"Plan".</p>
+<p><img alt="A screenshot of a computer Description automatically
+generated" src="C:\cmpMD\CMPmdVersioned\docs\images\extract/media/image271.png" />{width="6.299305555555556in"
+height="3.1493055555555554in"}<img alt="A screen shot of a computer Description
+automatically generated with low
+confidence" src="C:\cmpMD\CMPmdVersioned\docs\images\extract/media/image272.png" />{width="6.299305555555556in"
+height="1.96875in"}</p>
+<p>[]{#_Ref173157090 .anchor}Figura 294 - Compilazione dei campi del form
+di previsione di una risorsa</p>
+<p>Dopo aver cliccato sul pulsante "Submit", l'utente viene reindirizzato
+nella pagina "Plan" dello step 3 dove possiamo visualizzare il piano di
+provisioning inviato da terraform , che indica tutti i parametri delle
+risorse che verranno configurate e in basso è presente una lista con una
+prospettiva dei costi da sostenere(Figura 295).</p>
+<figure>
+<img
+src="/images/extract/media/image273.png"
+style="width:6.29931in;height:3.14931in"
+alt="Immagine che contiene testo, monitor, interni, screenshot Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157110" class="anchor"></span>Figura 295
+- Schermata della previsione</p></figcaption>
+</figure>
+
+<p>Sempre dalla pagina "Plan" dello step 3, in basso a destra, sono
+presenti tre pulsanti: "Back", "Reset" e "Apply". Se si clicca sul
+pulsante "Back", l'utente torna nella pagina "Config" dello step 2 in
+cui è possibile modificare i parametri.</p>
+<p>Se si clicca sul pulsante "Reset", l'utente viene reindirizzato nella
+pagina "Subscription" dello step 1 in cui è necessario selezionare un
+sottosistema, e successivamente inserire i parametri all'interno della
+pagina "Config" dello step 2.</p>
+<p>Infine, se si clicca sul pulsante "Apply", la previsione viene salvata e
+l'utente viene reindirizzato nella pagina del tab "Dashboard" in cui
+l'utente verifica la presenza della previsione appena creata (Figura
+296).</p>
+<figure>
+<img
+src="/images/extract/media/image274.png"
+style="width:6.69306in;height:3.34306in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref173157119" class="anchor"></span>Figura 296
+- Lista delle previsioni</p></figcaption>
+</figure>
+
+<h4 id="provisioning-di-servizi">Provisioning di "Servizi"</h4>
+<p>Per accedere alla pagina dei servizi cliccare sul tab che raffigura uno
+scaffale posizionato nel menu in alto. Fatto questo, ci si ritrova
+all'interno della pagina "Service" (Figura 297).</p>
+<figure>
+<img
+src="/images/extract/media/image275.png"
+style="width:6.6875in;height:3.26347in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157125" class="anchor"></span>Figura 297
+- Lista delle card</p></figcaption>
+</figure>
+
+<p>All' interno della pagina viene visualizzata una lista di componenti
+denominati "Card". Ogni card fa riferimento ad un tipo di servizio
+specifico, in particolare vengono visualizzate le seguenti informazioni:</p>
+<ul>
+<li>
+<p>Nome del servizio;</p>
+</li>
+<li>
+<p>Icona del servizio;</p>
+</li>
+<li>
+<p>Tipologia di script utilizzato per il provisioning del servizio;</p>
+</li>
+<li>
+<p>Descrizione del servizio;</p>
+</li>
+<li>
+<p>Tasto "Subscribe" per procedere con la creazione del servizio.</p>
+</li>
+</ul>
+<p>A seconda della tipologia di servizio selezionato cambiano i passaggi
+per effettuarne i provisioning, di seguito verranno analizzati in
+dettaglio.</p>
+<h5 id="servizi-standard">Servizi "standard"</h5>
+<p>Cliccare il tasto "Subscribe" in corrispondenza di un servizio
+"standard", l'utente verrà reindirizzato alla pagina dello step 1 della
+creazione del servizio e verranno visualizzate tutte le versioni del
+servizio instanziabili dalla SCMP (Figura 298) in particolare verranno
+visualizzati vari blocchi ognuno con una lista di configurazioni:</p>
+<ul>
+<li>
+<p>Nome e versione del servizio che verrà instanziato;</p>
+</li>
+<li>
+<p>Nome e versione del sistema operativo che verrà installato sulla
+    macchina;</p>
+</li>
+<li>
+<p>Provider di appartenenza sul quale verrà provvisionato il servizio.</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image276.png"
+style="width:6.69306in;height:3.33958in"
+alt="A screenshot of a computer Description automatically generated" />
+<figcaption><p><span id="_Ref165992550" class="anchor"></span>Figura 298
+- Provisioning di un servizio “standard”</p></figcaption>
+</figure>
+
+<p>Selezionare una versione del software e premere il tasto "Continue",
+l'utente viene reindirizzato allo step 2 del provisioning di un
+servizio.(Figura 299)</p>
+<p>Allo step 2 sarà necessario selezionare un sottosistema e compilare il
+form con i dettagli del sottosistema scelto.</p>
+<figure>
+<img
+src="/images/extract/media/image277.png"
+style="width:6.75in;height:2.93906in"
+alt="Immagine che contiene software, testo, Software multimediale, computer Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992551" class="anchor"></span>Figura 299
+- Configurazione di un servizio “standard”</p></figcaption>
+</figure>
+
+<p>A valle del completamento di tutti i campi del form cliccare su
+"submit".</p>
+<p>Verrà inviata una richiesta al servizio Terrafom che validerà la
+configurazione di attivazione del flusso indicato e restituirà il
+risultato. (Figura 300)</p>
+<figure>
+<img
+src="/images/extract/media/image278.png"
+title="Inserimento dell&#39;immagine in corso..."
+style="width:6.97655in;height:2.89236in" />
+<figcaption><p><span id="_Ref165992552" class="anchor"></span>Figura 300
+- Sommario della configurazione del servizio</p></figcaption>
+</figure>
+
+<p>Cliccare su "Apply" per validare il flusso e attivare la sottoscrizione
+del servizio.</p>
+<p>Verrà aperta la pagina della dashboard con la lista di tutti i servizi
+sottoscritti ed il loro relativi stati.(Figura 300)\
+Nello specifico il nuovo servizio provvisionato avrà come stato "In
+esecuzione" di colore giallo, successivamente a seconda del risultato
+anche lo stato verrà aggiornato in "Completato" di colore verde o
+"Errore" di colore rosso</p>
+<figure>
+<img
+src="/images/extract/media/image279.png"
+style="width:6.95833in;height:2.88481in"
+alt="Immagine che contiene testo, software, Software multimediale, schermata Descrizione generata automaticamente" />
+<figcaption><p><span id="_Toc169789885" class="anchor"></span>Figura 301
+- Dashboard con la lista di tutti i servizi sottoscritti ed il loro
+relativi stati</p></figcaption>
+</figure>
+
+<h5 id="servizi-custom">Servizi "Custom"</h5>
+<p>Cliccare il tasto "Subscribe" in corrispondenza di un servizio "custom",
+l'utente verrà reindirizzato alla pagina dello step 1 della creazione
+del servizio dove si può selezionare il sottosistema, nel quale
+effettuare il provisioining, dalla dropdown al centro della pagina
+(Figura 302)</p>
+<figure>
+<img
+src="/images/extract/media/image280.png"
+style="width:6.69306in;height:3.28696in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992553" class="anchor"></span>Figura 302
+- Provisioning di un servizio “Custom”</p></figcaption>
+</figure>
+
+<p>Selezionando il sosttossitema la pagina si aggiorna per passare allo
+step 2 del provisioning di un servizio.</p>
+<p>In questo step 2 sarà necessario compilare il form con i parametri di
+configurazione specifici del servizio selezionato (Figura 303)</p>
+<figure>
+<img
+src="/images/extract/media/image277.png"
+style="width:6.75in;height:2.93906in"
+alt="Immagine che contiene software, testo, Software multimediale, computer Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992554" class="anchor"></span>Figura 303
+- Configurazione di un servizio “custom”</p></figcaption>
+</figure>
+
+<p>A valle del completamento di tutti i campi del form cliccare su
+"launch".</p>
+<p>Verrà inviata una richiesta al servizio Terrafom che validerà la
+configurazione di attivazione del flusso indicato e restituirà il
+risultato. (Figura 304)</p>
+<figure>
+<img
+src="/images/extract/media/image278.png"
+title="Inserimento dell&#39;immagine in corso..."
+style="width:6.97655in;height:2.89236in" />
+<figcaption><p><span id="_Ref165992555" class="anchor"></span>Figura 304
+- Sommario della configurazione del servizio</p></figcaption>
+</figure>
+
+<p>Cliccare su "Apply" per validare il flusso e per far iniziare le
+operazioni automatiche di configurazione</p>
+<p>Verrà aperta la pagina della dashboard (Figura 305) con la lista di
+tutti i servizi sottoscritti ed il loro relativi stati.\
+Nello specifico il nuovo servizio provvisionato avrà come stato "In
+esecuzione" di colore giallo, successvamente a seconda del risultato
+anche lo stato verrà aggiornato in "Completato" di colore verde o
+"Errore" di colore rosso</p>
+<figure>
+<img
+src="/images/extract/media/image279.png"
+style="width:6.95833in;height:2.88481in"
+alt="Immagine che contiene testo, software, Software multimediale, schermata Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992556" class="anchor"></span>Figura 305
+- Dashboard con la lista di tutti i servizi sottoscritti ed il loro
+relativi stati</p></figcaption>
+</figure>
+
+<h5 id="servizi-azure-pipeline">Servizi "Azure Pipeline"</h5>
+<p>Cliccare il tasto "Subscribe" in corrispondenza di un servizio "Azure
+pipeline", l'utente verrà reindirizzato alla pagina dello step 1 della
+creazione del servizio, dalla dropdown al centro della pagina
+selezionare il "Branch" della pipeline da eseguire (Figura 306)</p>
+<figure>
+<img
+src="/images/extract/media/image281.png"
+style="width:6.59889in;height:3.42708in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992557" class="anchor"></span>Figura 306
+- Provisioning di un servizio “Azure pipeline”</p></figcaption>
+</figure>
+
+<p>Selezionando il branch la pagina si aggiorna per passare allo step 2
+della creazione di un servizio.</p>
+<p>In questo step 2 sarà necessario compilare il form con i parametri di
+configurazione recuperati direttamente dalla Pipeline che verrà eseguita
+(Figura 307)</p>
+<figure>
+<img
+src="/images/extract/media/image282.png"
+style="width:6.45833in;height:4.44907in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992558" class="anchor"></span>Figura 307
+- Configurazione di un servizio “Azure pipeline”</p></figcaption>
+</figure>
+
+<p>A valle del completamento di tutti i campi del form cliccare su "launch"
+per lanciare la richiesta di avvio della pipeline, Verrà aperta la
+pagina della dashboard con la lista di tutti i servizi sottoscritti ed
+il loro relativi stati. (Figura 308)\
+Nello specifico il nuovo servizio provvisionato avrà come stato "In
+esecuzione" di colore giallo, successvamente a seconda del risultato
+anche lo stato verrà aggiornato in "Completato" di colore verde o
+"Errore" di colore rosso</p>
+<figure>
+<img
+src="/images/extract/media/image279.png"
+style="width:6.95833in;height:2.88481in"
+alt="Immagine che contiene testo, software, Software multimediale, schermata Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992559" class="anchor"></span>Figura 308
+- Dashboard con la lista di tutti i servizi sottoscritti ed il loro
+relativi stati</p></figcaption>
+</figure>
+
+<h5 id="servizi-paas-e-ai-services">Servizi "PaaS" e "AI Services"</h5>
+<p>Cliccare il tasto "Subscribe" in corrispondenza di un servizio "PaaS",
+l'utente verrà reindirizzato alla pagina dello step 1 della creazione
+del servizio dove sarà necessario compilare il form con i parametri di
+configurazione specifici del servizio selezionato (Figura 309)</p>
+<figure>
+<img
+src="/images/extract/media/image283.png"
+style="width:6.22917in;height:4.2461in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992560" class="anchor"></span>Figura 309
+- Configurazione di un servizio “PaaS”</p></figcaption>
+</figure>
+
+<p>A valle del completamento di tutti i campi del form cliccare su
+"launch".</p>
+<p>Verrà aperta la pagina della dashboard con la lista di tutti i servizi
+sottoscritti ed il loro relativi stati.(Figura 310)\
+Nello specifico il nuovo servizio provvisionato avrà come stato "In
+esecuzione" di colore giallo, successivamente a seconda del risultato
+anche lo stato verrà aggiornato in "Completato" di colore verde o
+"Errore" di colore rosso</p>
+<figure>
+<img
+src="/images/extract/media/image279.png"
+style="width:6.95833in;height:2.88481in"
+alt="Immagine che contiene testo, software, Software multimediale, schermata Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref165992561" class="anchor"></span>Figura 310
+- Dashboard con la lista di tutti i servizi sottoscritti ed il loro
+relativi stati</p></figcaption>
+</figure>
+
+<h4 id="creazione-di-una-richiesta-di-provisioning-blueprint">Creazione di una richiesta di provisioning "Blueprint"</h4>
+<p>Per accedere alla pagina dei servizi cliccare sul tab che raffigura
+delle finestre, nel menu in alto. Fatto questo, ci si ritrova
+all'interno della pagina "Blueprints" (Figura 311).</p>
+<p>All' interno della pagina viene visualizzata una lista di componenti
+denominati "Card". Ogni card fa riferimento ad un tipo di servizio
+specifico, in particolare vengono visualizzate le seguenti informazioni:</p>
+<ul>
+<li>
+<p>Nome del servizio;</p>
+</li>
+<li>
+<p>Icona del servizio;</p>
+</li>
+<li>
+<p>Tipologia di script utilizzato per il provisioning del servizio;</p>
+</li>
+<li>
+<p>Descrizione del servizio;</p>
+</li>
+<li>
+<p>Tasto "Subscribe" per procedere con la creazione del servizio.</p>
+</li>
+</ul>
+<p>A seconda della blueprint selezionata cambiano i parametri per
+effettuarne i provisioning, mentre le funzionalità rimangono invariate.</p>
+<figure>
+<img
+src="/images/extract/media/image275.png"
+style="width:6.6875in;height:3.26347in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157151" class="anchor"></span>Figura 311
+- Lista delle blueprint</p></figcaption>
+</figure>
+
+<h5 id="richiesta-di-esecuzione-della-blueprint">Richiesta di esecuzione della "Blueprint"</h5>
+<p>Cliccare il tasto "Subscribe" in corrispondenza di una "Blueprint",
+l'utente verrà reindirizzato alla pagina dello step 1 della creazione,
+in questo step è necessario selezionare dal dropdown il sottosistema nel
+quale si vuole effettuare il provisioning(Figura 312)</p>
+<figure>
+<img
+src="/images/extract/media/image284.png"
+style="width:6.89097in;height:3.39306in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157162" class="anchor"></span>Figura -
+Step 1 della creazione di una Blueprint</p></figcaption>
+</figure>
+
+<p>Selezionando un sottosistema la pagina passerà nello step 2 della
+creazione dove sarà necessario compilare il form con i parametri di
+configurazione specifici della blueprint selezionata (Figura 313)</p>
+<p>[]{#_Ref173157168 .anchor}Figura - Step 2 della creazione \"Blueprint\"</p>
+<p>Completato l'inserimento dei parametri è possibile cliccare il pulsante
+"Start" in basso a destra per avviare il provisioning (Figura 314), dopo
+alcuni secondi verremo reindirizzati nella pagina "Dashboard" filtrata
+per "Blueprint da completare"</p>
+<figure>
+<img
+src="/images/extract/media/image286.png"
+style="width:6.89097in;height:3.34583in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157175" class="anchor"></span>Figura -
+Richiesta "Blueprint" inviata correttamente</p></figcaption>
+</figure>
+
+<h5 id="pagina-di-gestione-della-blueprint-da-completare">Pagina di gestione della blueprint "da completare"</h5>
+<p>Per poter lavorare la blueprint è necessario , dalla dashboard ,
+selezionare una blueprint "da completare" , cliccando sulla riga
+corrispondente verrà visualizzata la sua pagina di gestione (Figura 315)</p>
+<p>Questa pagina è divisa in sezioni, nello specifico:</p>
+<ul>
+<li>
+<p>"Process Diagram": in questa sezione viene visualizzata una immagine
+    che rappresenta graficamente tutti i passaggi da eseguire nella
+    blueprint, inoltre viene indicato in rosso lo step in esecuzione.</p>
+</li>
+<li>
+<p>"Variables": in questa sezione possiamo visualizzare tutti i
+    parametri inseriti manualmente o automaticamente durante
+    l'esecuzione della blueprint.</p>
+</li>
+<li>
+<p>"Task": in questa sezione è possibile tramite i controlli
+    disponibili, gestire gli step della blueprint che richiedono un
+    intervento manuale.</p>
+</li>
+<li>
+<p>"Subprocess": in questa sezione potremo visualizzare lo stato di
+    tutte le operazioni automatiche effettuata durante l'esecuzione
+    della blueprint (Figura 316)</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image287.png"
+style="width:6.89097in;height:3.39306in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157181" class="anchor"></span>Figura -
+Flow del piano di provisioning</p></figcaption>
+</figure>
+
+<p>L' esecuzione , e quindi il relativo cambio, tra gli step della
+Blueprint può essere effettuato in due modi, automaticamente o
+manualmente, esattamente come descritto all' interno della Blueprint
+stessa.</p>
+<h6 id="step-automatici">Step automatici</h6>
+<p>Il sistema gestisce automaticamente la creazione, configurazione  di
+risorse e deploy di applicazioni, lo stato e il risultato di questi step
+sono visibili nella sezione "Subprocess" in basso. (Figura 316)</p>
+<p>Per ogni riga presente nella tabella è possibile, cliccando i pulsanti
+presenti sulla destra, verificare il messaggio di output generato e
+scaricarne il contenuto.</p>
+<figure>
+<img
+src="/images/extract/media/image288.png"
+style="width:6.89097in;height:3.39306in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157212" class="anchor"></span>Figura -
+Sezione sottoprocessi delle blueprint</p></figcaption>
+</figure>
+
+<h6 id="step-manuali">Step manuali</h6>
+<p>I task manuali, quando presenti e richiesti nella blueprint, appariranno
+nella relativa sezione, per poterlo lavorare è necessario prima cliccare
+sul pulsante "Assign" (di colore rosso nella figura) per prendere in
+carico il task.(Figura 317)</p>
+<figure>
+<img
+src="/images/extract/media/image289.png"
+style="width:6.89097in;height:3.37292in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157910" class="anchor"></span>Figura –
+Assegnazione del task all’ utente</p></figcaption>
+</figure>
+
+<p>verrà visualizzata una modale di conferma assegnazione , cliccando "Yes"
+il task verrà preso in carico dall' utente e non potrà essere lavorato
+da un utente diverso. (Figura 318)</p>
+<figure>
+<img
+src="/images/extract/media/image290.png"
+style="width:6.89097in;height:3.42014in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157912" class="anchor"></span>Figura -
+Conferma assegnazione</p></figcaption>
+</figure>
+
+<p>In basso apparirà un messaggio di conferma e possiamo notare che la
+sezione "Task" (Figura 319) è stata aggiornata, viene indicato sulla
+sinistra, sotto il nome del task , il relativo assegnatario e sulla
+destra sono presenti 2 pulsanti:</p>
+<ul>
+<li>
+<p>"Rimuovi assegnazione" (di colore rosso nella figura)</p>
+</li>
+<li>
+<p>"Completa il task manuale"(di colore giallo nella figura)</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image291.png"
+style="width:6.87219in;height:3.36597in"
+alt="Immagine che contiene testo, schermata, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157911" class="anchor"></span>Figura -
+Pulsanti di gestione dei task</p></figcaption>
+</figure>
+
+<p>Cliccando "Rimuovi assegnazione" verrà aperta una modale di conferma
+(Figura 320) cliccando "Yes" il task verrà reso disponibile per gli
+altri utenti che potranno prenderlo in carico.</p>
+<figure>
+<img
+src="/images/extract/media/image292.png"
+style="width:6.89097in;height:3.35833in"
+alt="Immagine che contiene testo, software, Software multimediale, Software per la grafica Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157913" class="anchor"></span>Figura -
+Rilascio del task</p></figcaption>
+</figure>
+
+<p>Cliccando il pulsante "Completa il task" verrà aperta una modale con
+all' interno uno o più campi personalizzabili, i campi possono essere di
+diverse tipologie.</p>
+<p>Possiamo inserire campi numerici , booleani (Figura 321) e di
+testo(Figura 322) una volta inseriti è possibile confermare cliccando il
+pulsante "Continue" presente in basso a destra.</p>
+<figure>
+<img
+src="/images/extract/media/image293.png"
+style="width:6.89097in;height:3.39306in"
+alt="Immagine che contiene testo, schermata, Software multimediale, software Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157914" class="anchor"></span>Figura -
+Campi numerici delle blueprint</p></figcaption>
+</figure>
+
+<figure>
+<img
+src="/images/extract/media/image294.png"
+style="width:6.89097in;height:3.41806in"
+alt="Immagine che contiene testo, schermata, Software multimediale, software Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157915" class="anchor"></span>Figura -
+Campi di testo nelle Blueprint</p></figcaption>
+</figure>
+
+<p>Una volta premuto, possiamo notare che il grafico BPMN presente in
+pagina è stato aggiornato e che il successivo step della blueprint è
+attivo e presenta un contorno di colore rosso.(Figura 323)</p>
+<figure>
+<img
+src="/images/extract/media/image295.png"
+style="width:6.89097in;height:3.16389in"
+alt="Immagine che contiene schermata, software, Software multimediale, Icona del computer Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157916" class="anchor"></span>Figura -
+Step successivo</p></figcaption>
+</figure>
+
+<p>Tutti i task manuali presenti nella blueprint seguiranno la procedura
+descritta precedentemente; quindi, indipendentemente dalla tipologia di
+dato da inserire è sempre necessario assegnarsi il task.</p>
+<p>Viene data la possibilità di inserire all' interno degli step manuali
+delle blueprint anche un campo temporale, (Figura 324) utilizzando un
+calendario sarà possibile selezionare manualmente il giorno e l'orario
+corretto.</p>
+<figure>
+<img
+src="/images/extract/media/image296.png"
+style="width:6.89097in;height:3.38403in"
+alt="Immagine che contiene testo, Software multimediale, software, Software per la grafica Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157917" class="anchor"></span>Figura -
+Campo Data nei task</p></figcaption>
+</figure>
+
+<p>L' ultima tipologia di step che possiamo trovare all' interno delle
+blueprint è il campo "Multiscelta", questo campo permette di gestire il
+flusso della blueprint (Figura 325)</p>
+<figure>
+<img
+src="/images/extract/media/image297.png"
+style="width:6.89097in;height:3.38403in"
+alt="Immagine che contiene schermata, testo, Software multimediale, software Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157918" class="anchor"></span>Figura -
+Campo Multi scelta</p></figcaption>
+</figure>
+
+<p>Questo campo è di tipo "Selezione" , non sarà quindi possibile inserire
+un valore personalizzato ma verranno proposte delle opzioni
+selezionabili,( Figura 327) nello specifico possiamo trovare tre scelte:</p>
+<ul>
+<li>
+<p>"Repeat" : permette di rieseguire gli step precedenti come descritto
+    nella blueprint (percorso in rosa nella figura)</p>
+</li>
+<li>
+<p>"End": permette di concludere l'esecuzione della blueprint senza
+    eseguire ulteriori operazioni (percorso in giallo nella figura)</p>
+</li>
+<li>
+<p>"Insert date": permette di spostarsi ad uno step successivo della
+    blueprint (percorso in verde nella fiugra)</p>
+</li>
+</ul>
+<figure>
+<img
+src="/images/extract/media/image298.png"
+style="width:6.89097in;height:3.40347in"
+alt="Immagine che contiene schermata, testo, Software multimediale, software Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157919" class="anchor"></span>Figura -
+Valori del campo Multi scelta</p></figcaption>
+</figure>
+
+<p>[]{#_Ref173157920 .anchor}Figura - Possibili cambi di stato per Multi
+scelta</p>
+<p>Una volta completati tutti i passaggi della blueprint il grafico verrà
+automaticamente eliminato dalla pagina e nella sezione step non sarà più
+possibile prendere in carico una operazione, inoltre nella sezione
+"sottoprocessi" potremo visualizzare il risultato di tutti gli step
+atuomatizzati nella blueprint(Figura 328)</p>
+<figure>
+<img
+src="/images/extract/media/image300.png"
+style="width:6.89097in;height:3.40347in"
+alt="Immagine che contiene schermata, testo, software, Software multimediale Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157921" class="anchor"></span>Figura -
+Completamento della Blueprint</p></figcaption>
+</figure>
+
+<h4 id="modifica-di-un-provisioning-effettuato">Modifica di un provisioning effettuato</h4>
+<p>Per un provisioning effettuato e che non è andato a buon fine, è
+possibile effettuare la modifica al suddetto.</p>
+<p>La modifica del provisioning è disponibile solo per le risorse di tipo.</p>
+<p>Per avviare la modifica di un provisioning, cliccare su una previsione
+non andata a buon fine (Figura 329).</p>
+<figure>
+<img
+src="/images/extract/media/image301.png"
+style="width:6.29931in;height:3.14931in"
+alt="Immagine che contiene testo, monitor, screenshot, nero Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157922" class="anchor"></span>Figura 329
+- Avvio della modifica di un Provisioning</p></figcaption>
+</figure>
+
+<p>Dopo aver fatto ciò, ci si ritroverà all'interno della pagina "Config"
+dello step 2 in cui è possibile modificare i parametri precedentemente
+inseriti (Figura 330).</p>
+<figure>
+<img
+src="/images/extract/media/image302.png"
+style="width:6.69306in;height:2.75in"
+alt="Immagine che contiene testo, screenshot, monitor, interni Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157923" class="anchor"></span>Figura -
+Parametri di configurazione</p></figcaption>
+</figure>
+
+<figure>
+<img
+src="/images/extract/media/image303.png"
+style="width:6.69306in;height:1.76042in"
+alt="A screen shot of a computer Description automatically generated with low confidence" />
+<figcaption><p><span id="_Ref173157924" class="anchor"></span>Figura 331
+- Modifica dei parametri</p></figcaption>
+</figure>
+
+<p>Dopo aver modificato i parametri necessari, in basso a destra, cliccare
+sul pulsante "Submit".</p>
+<p>Facendo ciò, ci si ritroverà all'interno della pagina "Plan" dello step
+3 in cui è presente la previsione, e in basso la tabella dei preventivi
+(Figura 332).</p>
+<p>In basso a destra, cliccare sul pulsante "Apply". Dopo aver cliccato sul
+pulsante "Apply", ci si ritroverà all'interno della pagina del tab
+"Dashboard".</p>
+<p>Successivamente, dalla pagina "Dashboard", l'utente nota che la modifica
+è andata a buon fine.</p>
+<p>È possibile modificare un provisioning non andato a buon fine anche per
+gli altri elementi gestiti dalla SCMP.</p>
+<figure>
+<img
+src="/images/extract/media/image304.png"
+style="width:6.29931in;height:3.14931in"
+alt="Immagine che contiene testo, monitor, interni, screenshot Descrizione generata automaticamente" />
+<figcaption><p><span id="_Ref173157925" class="anchor"></span>Figura 332
+- Prospetto del Provisioning e tabella dei preventivi</p></figcaption>
+</figure>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  </body>
+</html>
